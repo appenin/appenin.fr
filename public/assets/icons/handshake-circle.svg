@@ -1,0 +1,6 @@
+<svg fill="currentColor" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Handshake circle</title>
+  <path d="m17.5 13.652-3.929.786M14 10l-1.854.761a1.2 1.2 0 0 1-.982-2.188l1.853-.9a1.657 1.657 0 0 1 1.308-.073l3.383 1.294" fill="none"/>
+  <path d="M6.5 14.5h1.4l2.33 1.833a.684.684 0 0 0 .944.073l3.5-2.868a.684.684 0 0 0 .105-.949l-1.922-2.118M11.01 8.675l-.25-.206a1.471 1.471 0 0 0-.87-.285 1.452 1.452 0 0 0-.545.105L6.5 9.5m-2.5 6h1.5a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H4m16 7h-1.5a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1H20" fill="none"/>
+  <path d="M.5 12a11.5 11.5 0 1 0 23 0 11.5 11.5 0 1 0-23 0Z" fill="none"/>
+</svg>
