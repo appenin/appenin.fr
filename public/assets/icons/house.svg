@@ -1,0 +1,6 @@
+<svg fill="currentColor" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>House</title>
+  <path d="M3.5 10v12.5a1 1 0 0 0 1 1h15a1 1 0 0 0 1-1V10" fill="none"/>
+  <path d="M.5 13 12 1.5 23.5 13M10 15.5h4a1 1 0 0 1 1 1v7h0-6 0v-7a1 1 0 0 1 1-1Z" fill="none"/>
+  <path d="M10 9.5a2 2 0 1 0 4 0 2 2 0 1 0-4 0Z" fill="none"/>
+</svg>

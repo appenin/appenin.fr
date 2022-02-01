@@ -1,0 +1,5 @@
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <title>Check circle</title>
+  <path d="m18 7-6.38 8.66a1 1 0 0 1-.68.4 1 1 0 0 1-.75-.21L6 12.5"/>
+  <circle cx="12" cy="12" r="11.5"/>
+</svg>
