@@ -126,6 +126,7 @@ export const TrustHeader = styled('h3', {
   color: '$textSecondary',
   paddingBottom: '$8',
   '@md': {
+    paddingRight: '$6',
     paddingBottom: 0,
   },
 });

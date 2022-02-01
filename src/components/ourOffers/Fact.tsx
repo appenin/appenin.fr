@@ -23,7 +23,7 @@ export function Fact() {
             </header>
             <p>
               Constituez un portefeuille de clients qui vous génère des revenus récurrents, à
-              moindre efforts.
+              moindre effort.
             </p>
           </Card>
           <Card background="primary" rounded shadow>

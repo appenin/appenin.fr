@@ -5,20 +5,20 @@ import { Carousel as CarouselComponent } from 'react-responsive-carousel';
 import type { CarouselProps } from 'react-responsive-carousel';
 import * as Styled from './styled';
 
-function ButtonPrevious(onClickHandler: () => void, hasPrev: boolean, label: string) {
+function ButtonPrevious(onClickHandler: () => void, hasPrev: boolean, _label: string) {
   return (
     hasPrev && (
-      <Styled.ArrowPrevious type="button" onClick={onClickHandler} title={label}>
+      <Styled.ArrowPrevious type="button" onClick={onClickHandler} title="Précédent">
         <ArrowLeftIcon />
       </Styled.ArrowPrevious>
     )
   );
 }
 
-function ButtonNext(onClickHandler: () => void, hasNext: boolean, label: string) {
+function ButtonNext(onClickHandler: () => void, hasNext: boolean, _label: string) {
   return (
     hasNext && (
-      <Styled.ArrowNext type="button" onClick={onClickHandler} title={label}>
+      <Styled.ArrowNext type="button" onClick={onClickHandler} title="Suivant">
         <ArrowRightIcon />
       </Styled.ArrowNext>
     )
@@ -28,7 +28,7 @@ function ButtonNext(onClickHandler: () => void, hasNext: boolean, label: string)
 export function Carousel({
   autoPlay = true,
   infiniteLoop = true,
-  interval = 5000,
+  interval = 6000,
   showIndicators = false,
   showStatus = false,
   showThumbs = false,

@@ -57,7 +57,7 @@ export function Fact() {
               <Styled.Figure color="lightGreen">
                 <FlagStarIcon />
               </Styled.Figure>
-              <h3>Fierté &amp; engagement</h3>
+              <h3>Fierté et engagement</h3>
             </header>
             <p>
               L&apos;assurance est une affaire sérieuse et la promesse s&apos;exprime lors du

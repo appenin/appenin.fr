@@ -603,6 +603,12 @@ export const ContentText = styled('div', {
   boxShadow: '$default',
   backgroundColor: '$backgroundPrimary',
   padding: '$8',
+  '& a': {
+    textDecoration: 'underline',
+    '&:hover,&:focus': {
+      color: '$textSecondary',
+    },
+  },
   '@md': {
     padding: '$12',
   },

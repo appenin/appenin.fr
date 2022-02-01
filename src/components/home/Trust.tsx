@@ -13,12 +13,18 @@ export function Trust() {
     <Section>
       <Styled.TrustContainer>
         <Styled.TrustHeader>Ils nous font confiance</Styled.TrustHeader>
-        <XtoOne columns={2}>
+        <XtoOne
+          columns={2}
+          css={{
+            '@sm': { gridTemplateColumns: 'repeat(3,minmax(0,1fr))' },
+            '@md': { justifyContent: 'space-around' },
+          }}
+        >
           <PichetLogo />
           <SogexiaLogo />
-          <Image alt="E-Mobilia" height={30} src={EMobiliaLogo} width={100} />
           <RentilaLogo />
           <PartnersFinancesLogo />
+          <Image alt="E-Mobilia" height={30} src={EMobiliaLogo} width={100} />
           {/*<Image alt="Réside Etudes" height={27} src={ResideEtudesLogo} width={100} />*/}
         </XtoOne>
       </Styled.TrustContainer>

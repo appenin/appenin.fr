@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import OpenQuoteIcon from '@/assets/icons/open-quote.svg';
 import EMobiliaLogo from '@/assets/logos/e-mobilia.png';
+import OdalysCampusLogo from '@/assets/logos/odalys-campus.jpg';
 import Carousel from '@/components/carousel';
 import { Section } from '@/components/ui';
 import * as Styled from './styled';
@@ -18,12 +19,7 @@ export function Partner() {
           <Carousel>
             <Styled.Slide>
               <figure>
-                <Image
-                  alt="Rentila logo"
-                  height={30.24}
-                  src="/assets/logos/rentila.svg"
-                  width={100}
-                />
+                <Image alt="Rentila" height={30.24} src="/assets/logos/rentila.svg" width={100} />
               </figure>
               <p>
                 <OpenQuoteIcon />
@@ -33,18 +29,13 @@ export function Partner() {
                 L&apos;intégration de l&apos;API s&apos;est faite en quelques jours.
               </p>
               <footer>
-                <strong>Roumen GUEORGUIEV</strong>
+                <strong>Roumen Gueorguiev</strong>
                 Cofondateur et CEO de Rentila
               </footer>
             </Styled.Slide>
             <Styled.Slide>
               <figure>
-                <Image
-                  alt="Sogexia logo"
-                  height={29.3}
-                  src="/assets/logos/sogexia.svg"
-                  width={100}
-                />
+                <Image alt="Sogexia" height={29.3} src="/assets/logos/sogexia.svg" width={100} />
               </figure>
               <p>
                 <OpenQuoteIcon />
@@ -59,7 +50,7 @@ export function Partner() {
             </Styled.Slide>
             <Styled.Slide>
               <figure>
-                <Image alt="E-Mobilia logo" height={30} src={EMobiliaLogo} width={100} />
+                <Image alt="E-Mobilia" height={30} src={EMobiliaLogo} width={100} />
               </figure>
               <p>
                 <OpenQuoteIcon />
@@ -87,6 +78,24 @@ export function Partner() {
               <footer>
                 <strong>Linda Merabet</strong>
                 Responsable de résidence étudiante
+              </footer>
+            </Styled.Slide>
+            <Styled.Slide>
+              <figure>
+                <Image alt="Odalys campus" height={39} src={OdalysCampusLogo} width={100} />
+              </figure>
+              <p>
+                <OpenQuoteIcon />
+                La solution APPENIN nous a permis de pouvoir répondre à un besoin immédiat de nos
+                futurs résidents, la rapidité du process et sa digitalisation s&apos;inscrivent dans
+                une volonté de dématérialisation des documents, nos équipes sont enchantées de ce
+                service qui permet une gestion optimale des dossiers, de surcroit nous entourer
+                d&apos;un partenariat dans un esprit start-up nous convient parfaitement puisque
+                cela correspond aux valeurs d&apos;innovation et d&apos;agilité de notre Groupe.
+              </p>
+              <footer>
+                <strong>James Galland</strong>
+                Directeur Général Odalys Campus
               </footer>
             </Styled.Slide>
           </Carousel>

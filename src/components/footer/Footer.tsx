@@ -15,7 +15,7 @@ export function Footer(props: FooterProps) {
         <Styled.Logo>
           <Image alt="Appenin logo" layout="fill" src="/assets/logos/appenin.svg" />
         </Styled.Logo>
-        <XtoOne columns={3} css={{ placeItems: 'flex-start' }}>
+        <XtoOne columns={2} css={{ placeItems: 'flex-start' }}>
           <ul>
             <li>
               <Link href="/" passHref>
@@ -67,9 +67,7 @@ export function Footer(props: FooterProps) {
                 </Button>
               </Link>
             </li>
-          </ul>
-          <ul>
-            <li>
+            <li style={{ paddingTop: '1rem' }}>
               <strong>Suivez-nous</strong>
             </li>
             <li>

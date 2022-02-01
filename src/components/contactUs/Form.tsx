@@ -6,13 +6,10 @@ import * as Styled from './styled';
 
 export function Form() {
   const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
-    const formData = new FormData(event.currentTarget);
     pushEvent({
       action: 'submit_form',
       category: 'Contact',
-      label: `[${formData.get('company')}] ${formData.get('first_name')} ${formData.get(
-        'last_name',
-      )} (${formData.get('email')})`,
+      label: '',
     });
   };
 
@@ -31,7 +28,7 @@ export function Form() {
           <input type="hidden" name="retURL" value="https://www.appenin.fr/merci" />
           <Styled.Field>
             <label htmlFor="company">
-              NON DE LA SOCIÉTÉ <span>*</span>
+              NOM DE LA SOCIÉTÉ <span>*</span>
             </label>
             <input id="company" maxLength={40} name="company" required type="text" />
           </Styled.Field>

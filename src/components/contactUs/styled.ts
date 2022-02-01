@@ -89,9 +89,6 @@ export const Field = styled('div', {
     '&:hover,&:focus': {
       borderColor: 'hsl($brand)',
     },
-    '&:invalid': {
-      borderColor: 'hsl($mandy)!important',
-    },
   },
 });
 

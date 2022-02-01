@@ -21,19 +21,23 @@ export default function LegalNotices(_props: NextPage) {
               <strong>Qui sommes-nous&nbsp;?</strong>
               <br />
               <br />
-              Le site www.appenin.fr (ci-après le &quot;Site&quot;) est édité par la SAS Appenin, au
-              capital de 7&nbsp;038&nbsp;400&nbsp;€, immatriculée sous le numéro
-              482&nbsp;112&nbsp;331&nbsp;au Registre du Commerce et des Sociétés de Paris. Le siège
-              social d’APPENIN est établi au 86/90 rue Saint-Lazare 75009 Paris, numéro de TVA
-              intracommunautaire FR&nbsp;75&nbsp;482112331.
+              Le site{' '}
+              <a href="https://www.appenin.fr" target="_blank" rel="noreferrer">
+                www.appenin.fr
+              </a>{' '}
+              (ci-après le &quot;Site&quot;) est édité par la SAS Appenin, au capital de
+              7&nbsp;038&nbsp;400&nbsp;€, immatriculée sous le numéro 482&nbsp;112&nbsp;331&nbsp;au
+              Registre du Commerce et des Sociétés de Paris. Le siège social d&apos;APPENIN est
+              établi au 86/90 rue Saint-Lazare 75009 Paris, numéro de TVA intracommunautaire
+              FR&nbsp;75&nbsp;482112331.
               <br />
               <br />
               La directrice de la publication est Madame Juliette BAUDOT.
               <br />
               <br />
               Appenin est enregistré à l&apos;ORIAS (situé 1, rue Jules Lefebvre 75311 Paris cedex
-              09, email&nbsp;: contact@orias.fr) sous le numéro 20001013 en qualité de courtier en
-              assurances.
+              09, email&nbsp;: <a href="mailto:contact@orias.fr">contact@orias.fr</a>) sous le
+              numéro 20001013 en qualité de courtier en assurances.
               <br />
               <br />
               APPENIN est soumise au contrôle de l&apos;Autorité de Contrôle Prudentiel et de

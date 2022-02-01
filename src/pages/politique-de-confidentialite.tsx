@@ -18,18 +18,26 @@ export default function PrivacyPolicy(_props: NextPage) {
           <Section.Container>
             <ContentText>
               <Section.Header>POLITIQUE DE CONFIDENTIALITÉ</Section.Header>
-              <strong>Mise à jour le 01/02/2022</strong>
+              <strong>Mise à jour 01/02/2022</strong>
               <br />
               <br />
-              Le site www.appenin.fr (ci-après le &quot;Site&quot;) a pour objet&nbsp;:
+              Le site{' '}
+              <a href="https://www.appenin.fr" target="_blank" rel="noreferrer">
+                www.appenin.fr
+              </a>{' '}
+              (ci-après le &quot;Site&quot;) a pour objet&nbsp;:
               <ul style={{ listStyle: 'inside disc' }}>
                 <li>de rediriger les clients vers leur espace client&nbsp;;</li>
-                <li>de s&quot;adresser aux professionnels (BtoB).</li>
+                <li>de s&apos;adresser aux professionnels (BtoB).</li>
               </ul>
               <br />
               Le Site permet aux partenaires de contacter APPENIN&nbsp;:
               <ul style={{ listStyle: 'inside disc' }}>
-                <li>par mail à l&apos;adresse&nbsp;: partenaire@appenin.fr&nbsp;;</li>
+                <li>
+                  par mail à l&apos;adresse&nbsp;:{' '}
+                  <a href="mailto:partenaire@appenin.fr">partenaire@appenin.fr</a>
+                  &nbsp;;
+                </li>
                 <li>via un formulaire de contact&nbsp;;</li>
                 <li>via un appel téléphonique en réservant un appel.</li>
               </ul>
@@ -41,7 +49,7 @@ export default function PrivacyPolicy(_props: NextPage) {
                 <li>numéro de téléphone (si non professionnel).</li>
               </ul>
               <br />
-              Cookies&nbsp;:
+              <strong>Cookies&nbsp;:</strong>
               <ul style={{ listStyle: 'inside disc' }}>
                 <li>
                   Lors de la navigation sur le Site, des informations relatives à votre terminal
@@ -56,7 +64,7 @@ export default function PrivacyPolicy(_props: NextPage) {
                 </li>
               </ul>
               <br />
-              <strong>Qui est le responsable de traitement&nbsp?</strong>
+              <strong>Qui est le responsable de traitement&nbsp;?</strong>
               <br />
               Le responsable de traitement est la SAS Appenin, RCS Paris n° 482&nbsp;112&nbsp;331,
               86/90 rue Saint-Lazare, 75009 Paris, N° ORIAS 20001013.
@@ -64,9 +72,10 @@ export default function PrivacyPolicy(_props: NextPage) {
               <br />
               <strong>Que faisons-nous de vos données personnelles&nbsp;?</strong>
               <br />
-              En renseignant les données personnelles demandées, vous acceptez d&apos;être
-              recontacté par e-mail ou par téléphone, afin qu&apos;APPENIN puisse répondre à votre
-              demande de renseignement.
+              En renseignant les données personnelles demandées, vous demandez à être recontacté par
+              e-mail ou par téléphone, afin qu&apos;APPENIN puisse répondre à votre demande de
+              renseignement. La collecte des données est réalisée sur base légale
+              &quot;contrat&quot; du RGPD.
               <br />
               <br />
               <strong>Quelle est la durée de conservation de vos données&nbsp;?</strong>
@@ -77,23 +86,36 @@ export default function PrivacyPolicy(_props: NextPage) {
               <br />
               <br />
               <strong>Qui sont les destinataires de vos données&nbsp;?</strong>
-              Les données collectées sont collectées via les partenaires suivants&nbsp;:
+              <br />
+              APPENIN est seule destinataire des données.
+              <br />
+              <br />
+              <strong>
+                Les données collectées sont collectées via les partenaires suivants&nbsp;:
+              </strong>
               <ul style={{ listStyle: 'inside disc' }}>
                 <li>
-                  NOVOCALL&nbsp;: qui va collecter l&apos;email et/ou le numéro de téléphone&nbsp;;
+                  NOVOCALL&nbsp;: va collecter l&apos;email et/ou le numéro de téléphone et adresse
+                  IP&nbsp;;
                 </li>
                 <li>
-                  SALESFORCE&nbsp;: qui va collecter les données renseignées via le formulaire de
+                  SALESFORCE&nbsp;: va collecter les données renseignées via le formulaire de
                   contact&nbsp;;
+                  <ul style={{ listStyle: 'inside circle', paddingLeft: '1rem' }}>
+                    <li>
+                      Les données des prospects sont supprimées 3 ans à l&apos;issue du dernier
+                      contact.
+                    </li>
+                    <li>
+                      Les données des partenaires sont supprimées 5 ans à l&apos;issue du contrat.
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  GOOGLE &quot;Analytics&quot;&nbsp;: qui va collecter les donnéess de navigation à
-                  des fins d&apos;analyse statistique&nbsp;;
+                  VERCEL&nbsp;: va collecter les journaux du serveur (logs), les adresses IP
+                  (requêtes http).
                 </li>
-                <li>
-                  VERCEL&nbsp;: l&apos;hébergeur du Site, pour les journaux du serveur (logs), les
-                  adresses IP (requêtes http).
-                </li>
+                <li>GOOGLE Analytics&nbsp;: va collecter l&apos;adresse IP&nbsp;;</li>
               </ul>
               <br />
               <strong>
@@ -102,11 +124,44 @@ export default function PrivacyPolicy(_props: NextPage) {
                 Norvège et Islande)&nbsp;?
               </strong>
               <br />
-              En fonction des partenaires destinataires (pas de données stockées sur le serveur
-              web).
+              Certaines données personnelles peuvent être traitées en dehors de l&apos;EEE. Pour
+              plus d’informations&nbsp;:
+              <br />
+              <a href="https://novocall.co/legal-resources/" target="_blank" rel="noreferrer">
+                Ressources juridiques | Novocall
+              </a>
+              <br />
+              <a
+                href="https://www.salesforce.com/fr/company/privacy/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://www.salesforce.com/fr/company/privacy/
+              </a>
+              <br />
+              <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noreferrer">
+                https://vercel.com/legal/privacy-policy
+              </a>
+              <br />
+              <a
+                href="https://support.google.com/analytics/answer/6004245"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://support.google.com/analytics/answer/6004245
+              </a>
+              <br />
+              <br />
+              Le RGPD s&apos;applique à toute organisation, publique et privée, qui traite des
+              données personnelles dès lors&nbsp;:
+              <ul style={{ listStyle: 'inside disc' }}>
+                <li>qu&apos;elle est établie sur le territoire de l&apos;Union européenne,</li>
+                <li>ou que son activité cible directement des résidents européens.</li>
+              </ul>
               <br />
               <br />
               <strong>Quels sont vos droits&nbsp;?</strong>
+              <br />
               <ul style={{ listStyle: 'inside disc' }}>
                 <li>
                   <strong>un droit d&apos;accès et de communication</strong> à vos données qui vous
@@ -145,9 +200,12 @@ export default function PrivacyPolicy(_props: NextPage) {
               <br />
               <strong>Comment exercer vos droits&nbsp;?</strong>
               <ul style={{ listStyle: 'inside disc' }}>
-                <li>par mail à&nbsp;: vie-privee@appenin.fr</li>
                 <li>
-                  ou bien par courrier à&nbsp;: APPENIN – Données personnelles – 86-90 rue
+                  par mail à&nbsp;: <a href="mailto:vie-privee@appenin.fr">vie-privee@appenin.fr</a>
+                  &nbsp;;
+                </li>
+                <li>
+                  ou bien par courrier à&nbsp;: APPENIN - Données personnelles - 86-90 rue
                   Saint-Lazare, 75 009 Paris.
                 </li>
               </ul>
@@ -157,9 +215,12 @@ export default function PrivacyPolicy(_props: NextPage) {
               <br />
               En cas d&apos;insatisfaction liée à la gestion de vos données personnelles, vous
               pouvez introduire une réclamation auprès de la CNIL&nbsp;: soit directement en ligne
-              en accédant au service dédié&nbsp;: https://www.cnil.fr, soit par courrier à
-              l&apos;adresse suivante&nbsp;: CNIL - 3 Place de Fontenoy - TSA 80715 - 75334 PARIS
-              CEDEX 07.
+              en accédant au service dédié&nbsp;:{' '}
+              <a href="https://www.cnil.fr" target="_blank" rel="noreferrer">
+                https://www.cnil.fr
+              </a>
+              , soit par courrier à l&apos;adresse suivante&nbsp;: CNIL - 3 Place de Fontenoy - TSA
+              80715 - 75334 PARIS CEDEX 07.
             </ContentText>
           </Section.Container>
         </Section>

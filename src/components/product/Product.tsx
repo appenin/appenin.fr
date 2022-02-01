@@ -20,7 +20,7 @@ export function Product() {
               <Styled.Figure color="yellow">
                 <HouseIcon />
               </Styled.Figure>
-              <h3>Assurance habitation</h3>
+              <h3>Assurance Habitation</h3>
             </header>
             <p>
               A chaque profil de client, sa solution&nbsp;: locataire d&apos;appartement ou de

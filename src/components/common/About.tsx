@@ -11,7 +11,7 @@ export function About({ withLinks = false }: AboutProps) {
     <>
       <Section block="right">
         <Section.Article>
-          <h2>La réactivité et l&apos;agilité d&apos;une start-up</h2>
+          <h2>La réactivité et l&apos;agilité d&apos;une startup</h2>
           <p>
             Vous adaptez les produits d&apos;assurance que vous proposez en fonction des besoins de
             vos clients... et vous mettez en production votre solution d&apos;assurance
