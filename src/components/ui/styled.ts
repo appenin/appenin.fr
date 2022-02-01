@@ -597,3 +597,13 @@ export const Section = styled('section', {
     },
   ],
 });
+
+export const ContentText = styled('div', {
+  borderRadius: '$5px',
+  boxShadow: '$default',
+  backgroundColor: '$backgroundPrimary',
+  padding: '$8',
+  '@md': {
+    padding: '$12',
+  },
+});

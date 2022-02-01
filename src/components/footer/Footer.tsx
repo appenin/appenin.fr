@@ -29,7 +29,7 @@ export function Footer(props: FooterProps) {
             </li>
             <li>
               <Link href="/qui-sommes-nous" passHref>
-                <a>Qui sommes nous&nbsp;?</a>
+                <a>Qui sommes-nous&nbsp;?</a>
               </Link>
             </li>
             <li>

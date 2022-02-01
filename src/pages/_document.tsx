@@ -10,7 +10,6 @@ export default class AppDocument extends Document {
     return (
       <Html>
         <Head>
-          {/*<meta content="notranslate" name="google" />*/}
           <link href={process.env.fontInter} rel="stylesheet" />
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
           <style id="theme">{`

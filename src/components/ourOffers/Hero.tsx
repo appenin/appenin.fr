@@ -14,7 +14,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => (
           Nos offres s&apos;adaptent à vos clients et non l&apos;inverse&nbsp;👌
           <br />
           <br />
-          <Link href="/contact" passHref>
+          <Link href="/nous-contacter" passHref>
             <Button color="secondary" size="lg">
               Devenir partenaire
             </Button>

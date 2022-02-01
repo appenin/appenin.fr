@@ -1,11 +1,18 @@
+import { MouseEvent } from 'react';
 import CalendarIcon from '@/assets/icons/calendar.svg';
-import PhoneCircleIcon from '@/assets/icons/phone-circle.svg';
 import SendEmailIcon from '@/assets/icons/send-email.svg';
 import Button from '@/components/button';
 import { Card, OneToX, Section } from '@/components/ui';
 import * as Styled from './styled';
 
 export function Contact() {
+  const handleAppointmentClick = (_event: MouseEvent<HTMLButtonElement>) => {
+    const novocallButton = document.querySelector<HTMLDivElement>('.novocall.novocall-button');
+    if (novocallButton) {
+      novocallButton.click();
+    }
+  };
+
   return (
     <Section>
       <Section.Container>
@@ -18,8 +25,8 @@ export function Contact() {
               <h3>Email</h3>
             </header>
             <p>Vous pouvez nous envoyer un email à</p>
-            <a href="mailto:partenaire@appenin.fr">
-              <strong>partenaire@appenin.fr</strong>
+            <a href="mailto:partenaires@appenin.fr">
+              <strong>partenaires@appenin.fr</strong>
             </a>
           </Card>
           <Card background="primary" rounded shadow>
@@ -29,7 +36,9 @@ export function Contact() {
               </Styled.Figure>
               <h3>Prendre rendez-vous</h3>
             </header>
-            <Button bordered>Réservez un appel</Button>
+            <Button bordered onClick={handleAppointmentClick}>
+              Réservez un appel
+            </Button>
           </Card>
         </OneToX>
       </Section.Container>

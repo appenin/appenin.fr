@@ -78,6 +78,7 @@ textDecorationColor
       sirocco: '173 7% 47%', //#70817f
       blackHaze: '180 5% 92%', //#eaecec
       atomicTangerine: '19 99% 67%', //#fe8c58
+      mandy: '347 72% 63%', //#e55c79
       black: '0 0% 0%', //#000000
       white: '0 100% 100%', //#ffffff
       gradientPrimaryStart: '$blueStone',

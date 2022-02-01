@@ -40,20 +40,58 @@ export const Background = styled(Container, {
 
 export const FormContainer = styled(Container, {
   marginTop: '$8',
-  '& > form': {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '$6',
-    borderRadius: '$5px',
-    boxShadow: '$default',
-    backgroundColor: '$backgroundPrimary',
-    padding: '$8',
-    '@md': {
-      padding: '$12',
-    },
-  },
   '@md': {
     marginTop: '12rem',
+  },
+});
+
+export const Form = styled('form', {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '$6',
+  borderRadius: '$5px',
+  boxShadow: '$default',
+  backgroundColor: '$backgroundPrimary',
+  padding: '$8',
+  '& > header,& > footer': {
+    textAlign: 'center',
+  },
+  '& > header': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '$3',
+    paddingBottom: '$8',
+  },
+  '@md': {
+    padding: '$12',
+  },
+});
+
+export const Field = styled('div', {
+  paddingBottom: '$3',
+  '& > *': {
+    display: 'block',
+    width: '$full',
+  },
+  '& > label': {
+    paddingBottom: '$3',
+    '& > span': {
+      color: 'hsl($mandy)',
+      fontWeight: '$medium',
+    },
+  },
+  '& > input, & > textarea': {
+    padding: '$3',
+    backgroundColor: '$backgroundBrandLight',
+    borderColor: '$backgroundBrandLight',
+    borderWidth: '$1px',
+    outline: 'none',
+    '&:hover,&:focus': {
+      borderColor: 'hsl($brand)',
+    },
+    '&:invalid': {
+      borderColor: 'hsl($mandy)!important',
+    },
   },
 });
 
