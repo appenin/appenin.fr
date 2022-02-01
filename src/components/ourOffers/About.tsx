@@ -10,7 +10,7 @@ export function About() {
     <>
       <Section>
         <Section.Container>
-          <Section.Header gradient rounded shadow>
+          <Section.Header gradient rounded shadow id="offres-a-propos">
             Comment intégrer notre offre&nbsp;?
             <br />
             <span>A vous de choisir</span>

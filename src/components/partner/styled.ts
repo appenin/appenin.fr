@@ -1,12 +1,17 @@
+import { CarouselItem } from '@/components/carousel';
 import { styled } from '@/styles';
 
-export const Partner = styled('div', {
-  minHeight: 144,
-  borderRadius: '$5px',
-  boxShadow: '$default',
-  backgroundColor: '$backgroundPrimary',
-  padding: '$8',
-  '@md': {
-    padding: '$12',
+export const Slide = styled(CarouselItem, {
+  '& > p': {
+    '& > svg': {
+      display: 'inline',
+      marginRight: '$3',
+      verticalAlign: 'baseline',
+    },
+  },
+  '& > footer': {
+    '& > strong': {
+      display: 'block',
+    },
   },
 });

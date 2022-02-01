@@ -9,26 +9,18 @@ export function Contact() {
   return (
     <Section>
       <Section.Container>
-        <OneToX columns={3}>
+        <OneToX columns={2}>
           <Card background="primary" rounded shadow>
             <header>
               <Styled.Figure color="yellow">
                 <SendEmailIcon />
               </Styled.Figure>
-              <h3>Mail</h3>
+              <h3>Email</h3>
             </header>
-            <p>Vous pouvez nous écrire par mail à</p>
-            <strong>contact@appenin.fr</strong>
-          </Card>
-          <Card background="primary" rounded shadow>
-            <header>
-              <Styled.Figure color="orange">
-                <PhoneCircleIcon />
-              </Styled.Figure>
-              <h3>Téléphone</h3>
-            </header>
-            <p>Vous pouvez nous appeler au</p>
-            <strong>01 83 62 51 71</strong>
+            <p>Vous pouvez nous envoyer un email à</p>
+            <a href="mailto:partenaire@appenin.fr">
+              <strong>partenaire@appenin.fr</strong>
+            </a>
           </Card>
           <Card background="primary" rounded shadow>
             <header>

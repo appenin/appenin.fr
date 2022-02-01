@@ -22,7 +22,7 @@ export default function WhoAreWe(_props: NextPage) {
       <Header stickyAnchorRef={stickyElRef} withSticky />
       <main>
         <Hero ref={stickyElRef} />
-        <Team />
+        {/*<Team />*/}
         <About />
         <Fact />
         <Testimonial />

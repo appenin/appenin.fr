@@ -26,7 +26,8 @@ export default function Contact(_props: NextPage) {
             Vous pouvez également nous appeler au <strong>01 83 62 51 71</strong>
             <br />
             <br />
-            Enfin, vous pouvez nous écrire par courrier à Appenin, 55 rue de Rivoli, 75001 Paris.
+            Enfin, vous pouvez nous écrire par courrier à{' '}
+            <strong>Appenin, 55 rue de Rivoli, 75001 Paris</strong>.
           </Section.Container>
         </Section>
         <Section>
@@ -40,7 +41,8 @@ export default function Contact(_props: NextPage) {
             You can also call us: <strong>+33 1 83 62 51 71</strong>
             <br />
             <br />
-            Would you prefer, you can write us: Appenin, 55 rue de Rivoli, 75001 Paris.
+            Would you prefer, you can write us:{' '}
+            <strong>Appenin, 55 rue de Rivoli, 75001 Paris</strong>.
           </Section.Container>
         </Section>
         <Group />

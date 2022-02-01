@@ -20,12 +20,11 @@ export function Product() {
               <Styled.Figure color="yellow">
                 <HouseIcon />
               </Styled.Figure>
-              <h3>Habitation</h3>
+              <h3>Assurance habitation</h3>
             </header>
             <p>
               A chaque profil de client, sa solution&nbsp;: locataire d&apos;appartement ou de
-              chambre en résidence universitaire, studio d&apos;étudiant, propriétaire de
-              maison,&nbsp;...
+              chambre en résidence universitaire, studio d&apos;étudiant, propriétaire de maison...
             </p>
           </Card>
           <Card background="primary" rounded shadow>
@@ -33,7 +32,7 @@ export function Product() {
               <Styled.Figure color="orange">
                 <HandshakeCircleIcon />
               </Styled.Figure>
-              <h3>PNO</h3>
+              <h3>Propriétaire Non Occupant</h3>
             </header>
             <p>
               Vos clients sont des bailleurs privés&nbsp;? Notre produit PNO (assurance Propriétaire
@@ -45,7 +44,7 @@ export function Product() {
               <Styled.Figure color="pink">
                 <LegalHammerShieldIcon />
               </Styled.Figure>
-              <h3>PJ</h3>
+              <h3>Protection Juridique</h3>
             </header>
             <p>
               Litige avec un voisin, un garagiste, un commerçant. Nos juristes experts en
@@ -54,7 +53,7 @@ export function Product() {
           </Card>
         </OneToX>
         <Styled.Footer>
-          <Link href="/nos-offres" passHref>
+          <Link href="/nous-contacter" passHref>
             <Anchor arrow underlined>
               Être informé de l&apos;arrivée de nouveaux produits
             </Anchor>

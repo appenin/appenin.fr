@@ -12,7 +12,13 @@ export const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => (
     <Container fluid>
       <Styled.Hero {...props}>
         <article>
-          <h1 data-testid="hero-header">L&apos;assurance sur-mesure pour vos clients</h1>
+          <h1 data-testid="hero-header">
+            L&apos;assurance
+            <br />
+            sur mesure
+            <br />
+            pour vos clients
+          </h1>
           <h3 data-testid="hero-sub-header">
             ⚡ Simplifiez la vie de vos clients, générez des revenus complémentaires.
           </h3>

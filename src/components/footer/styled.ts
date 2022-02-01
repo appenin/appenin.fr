@@ -21,9 +21,13 @@ export const Logo = styled('a', {
 
 export const Footer = styled(Container, {
   marginBottom: '$26',
-  '@md': {
+  '& a': {
+    '&:hover,&:focus': {
+      textDecoration: 'underline',
+    },
+  },
+  '@sm': {
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: 0,
   },

@@ -42,7 +42,7 @@ export const Background = styled(Container, {
     position: 'absolute',
     top: 0,
     right: -130,
-    height: 346.8,
+    height: 371.6,
     width: 380,
     backgroundImage: 'url(/assets/illustrations/girl-power.svg)',
     backgroundRepeat: 'no-repeat',

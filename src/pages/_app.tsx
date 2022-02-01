@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import { GA_TRACKING_ID, pageView } from '@/libs/google';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 export default function App({ Component, pageProps, router: { events } }: AppProps) {
   useEffect(() => {
     events.on('routeChangeComplete', pageView);
@@ -12,6 +14,7 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
       events.off('routeChangeComplete', pageView);
     };
   }, [events]);
+
   return (
     <>
       <Head>
@@ -19,8 +22,6 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
-      {/**
-       * Google script
       <Script
         id="google-script"
         src={`${process.env.analytics}${GA_TRACKING_ID}`}
@@ -40,11 +41,7 @@ gtag('config', '${GA_TRACKING_ID}', {
         }}
         strategy="afterInteractive"
       />
-      */}
-      {/**
-       * Novocall script
-       <Script id="novocall-script" src={process.env.novocall} strategy="afterInteractive" />
-      */}
+      <Script id="novocall-script" src={process.env.novocall} strategy="afterInteractive" />
     </>
   );
 }

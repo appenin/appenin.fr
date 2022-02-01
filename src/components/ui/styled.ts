@@ -46,12 +46,11 @@ export const XtoOne = styled('div', {
   display: 'grid',
   gap: '$6',
   placeItems: 'center',
-  '@sm': {
+  '@md': {
     display: 'inline-flex',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-end',
     flexGrow: 1,
-    gap: 0,
   },
   variants: {
     columns: {
@@ -59,7 +58,10 @@ export const XtoOne = styled('div', {
         gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
       },
       3: {
-        gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+        gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+        '@sm': {
+          gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+        },
       },
     },
   },

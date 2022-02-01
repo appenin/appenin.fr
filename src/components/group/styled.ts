@@ -2,17 +2,28 @@ import { Container } from '@/components/ui/styled';
 import { styled } from '@/styles';
 
 export const Group = styled(Container, {
-  '@md': {
-    display: 'flex',
+  display: 'flex',
+  flexDirection: 'column',
+  '& > figure': {
+    position: 'relative',
+    flex: 1,
+    minHeight: 90,
+    '& img': {
+      '@sm': {
+        objectPosition: 'right!important',
+      },
+    },
+  },
+  '@sm': {
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
   },
 });
 
 export const GroupHeader = styled('h3', {
   color: '$textTertiary',
   paddingBottom: '$8',
-  '@md': {
+  '@sm': {
     paddingBottom: 0,
   },
 });

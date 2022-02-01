@@ -44,6 +44,12 @@ export const reset = {
   p: {
     color: '$textSecondary',
   },
+  '.novocall-button.novocall-small': {
+    '@max-sm': {
+      bottom: '58px!important',
+      right: '8px!important',
+    },
+  },
   //From TailwindCSS: https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css
   /*
   1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)

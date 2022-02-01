@@ -15,6 +15,7 @@ export default createStitches({
     //portrait: '(orientation: portrait)',
     'motion-reduce': '(prefers-reduced-motion: reduce)',
     'motion-safe': '(prefers-reduced-motion: no-preference)',
+    'max-sm': '(max-width: 687.99px)',
     ...Object.keys(SCREENS_MAX_WIDTHS).reduce((acc: Token, key) => {
       acc[key] = `(min-width: ${SCREENS_MAX_WIDTHS[key][0]})`;
       return acc;

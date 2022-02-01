@@ -5,7 +5,7 @@ import Engagement from '@/components/engagement';
 import Footer from '@/components/footer';
 import Group from '@/components/group';
 import Header from '@/components/header';
-import { About, Fact, Hero, Offer } from '@/components/offers';
+import { About, Fact, Hero, Offer } from '@/components/ourOffers';
 import Partner from '@/components/partner';
 import Product from '@/components/product';
 

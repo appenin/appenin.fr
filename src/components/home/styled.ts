@@ -1,3 +1,4 @@
+import Carousel, { CarouselItem } from '@/components/carousel';
 import { Card, Container, Section } from '@/components/ui/styled';
 import { styled } from '@/styles';
 
@@ -96,17 +97,23 @@ export const FactCard = styled(Card, {
   },
   '& > header': {
     fontWeight: '$bold',
+    marginBottom: '$3',
     '& > *': {
       display: 'inline-block',
       verticalAlign: 'middle',
       '&:nth-child(2)': {
-        paddingLeft: '$2',
+        paddingLeft: '$3',
       },
     },
   },
 });
 
 export const TrustContainer = styled(Container, {
+  '& img,& svg': {
+    WebkitFilter: 'grayscale(100%)',
+    filter: 'grayscale(1)',
+    opacity: 0.4,
+  },
   '@md': {
     display: 'flex',
     alignItems: 'center',
@@ -121,4 +128,15 @@ export const TrustHeader = styled('h3', {
   '@md': {
     paddingBottom: 0,
   },
+});
+
+export const Slider = styled(Carousel, {
+  height: '$full',
+  '& div, & ul': {
+    height: '$full',
+  },
+});
+
+export const Slide = styled(CarouselItem, {
+  position: 'relative',
 });

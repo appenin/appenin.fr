@@ -19,7 +19,7 @@ export function Engagement() {
           <h2>Notre engagement&nbsp;: mettre notre expertise au service de vos clients</h2>
           <p>
             Professionnels de l&apos;immobilier, acteurs de l&apos;énergie, des telco ou des
-            services financiers, retailers,... Appenin vous offre un modèle de distribution
+            services financiers, retailers... Appenin vous offre un modèle de distribution
             d&apos;assurance sécurisé en matière d&apos;expérience client et de conformité
             réglementaire.
           </p>

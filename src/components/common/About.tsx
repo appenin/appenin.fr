@@ -20,7 +20,7 @@ export function About({ withLinks = false }: AboutProps) {
           {withLinks && (
             <Link href="/qui-sommes-nous" passHref>
               <Anchor arrow underlined>
-                Découvrir nos offres
+                Découvrir Appenin
               </Anchor>
             </Link>
           )}
@@ -46,7 +46,7 @@ export function About({ withLinks = false }: AboutProps) {
           {withLinks && (
             <Link href="/qui-sommes-nous" passHref>
               <Anchor arrow underlined>
-                En savoir plus
+                Découvrir Appenin
               </Anchor>
             </Link>
           )}

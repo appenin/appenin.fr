@@ -15,8 +15,8 @@ export function Fact() {
               <h4>100% en ligne</h4>
             </header>
             <p>
-              Avec Appenin vous distribuez facilement et sereinement de l&apos;assurance 100%
-              digitale
+              Avec Appenin, vous distribuez facilement et sereinement de l&apos;assurance 100%
+              digitale.
             </p>
           </Styled.FactCard>
           <Styled.FactCard>
@@ -26,7 +26,7 @@ export function Fact() {
               </figure>
               <h4>Revenus supplémentaires</h4>
             </header>
-            <p>Vous diversifiez votre activité avec de revenu connexe et récurrent</p>
+            <p>Vous diversifiez votre activité avec un revenu connexe.</p>
           </Styled.FactCard>
           <Styled.FactCard>
             <header>
@@ -36,7 +36,7 @@ export function Fact() {
               <h4>Clients satisfaits</h4>
             </header>
             <p>
-              Vous fidélisez vos clients grâce à une assurance responsable au service irréprochable
+              Vous fidélisez vos clients grâce à une assurance responsable et une expérience fluide.
             </p>
           </Styled.FactCard>
         </OneToX>

@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import IllustrationHP from '@/assets/photos/IllusHP-V7c.jpg';
+import IllustrationHP1 from '@/assets/photos/IllusHP-V7c.jpg';
+import IllustrationHP2 from '@/assets/photos/IllusHP-V6c.jpg';
 import Anchor from '@/components/anchor';
 import { About as CommonAbout } from '@/components/common';
 import { Section } from '@/components/ui';
+import * as Styled from './styled';
 
 export function About() {
   return (
@@ -24,9 +26,9 @@ export function About() {
             les plus robustes du marché. De la souscription à la gestion des sinistres, vos clients
             sont chouchoutés.
           </p>
-          <Link href="/qui-sommes-nous" passHref>
+          <Link href="/nos-offres" passHref>
             <Anchor arrow underlined>
-              Découvrir qui est Appenin
+              Découvrir les produits Appenin
             </Anchor>
           </Link>
         </Section.Article>
@@ -50,20 +52,35 @@ export function About() {
             l&apos;assurance à vos parcours clients et utilisez les interfaces de souscription
             prêtes à l&apos;emploi.
           </p>
-          <Link href="/nos-offres" passHref>
+          <Link href="/nos-offres#offres-a-propos" passHref>
             <Anchor arrow underlined>
               En savoir plus
             </Anchor>
           </Link>
         </Section.Article>
         <Section.Figure fluid>
-          <Image
-            alt="Illustration"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            src={IllustrationHP}
-          />
+          <Styled.Slider>
+            <Styled.Slide>
+              <Image
+                alt="Illustration"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                priority
+                src={IllustrationHP1}
+              />
+            </Styled.Slide>
+            <Styled.Slide>
+              <Image
+                alt="Illustration"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                priority
+                src={IllustrationHP2}
+              />
+            </Styled.Slide>
+          </Styled.Slider>
         </Section.Figure>
       </Section>
     </>
