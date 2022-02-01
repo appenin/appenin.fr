@@ -19,11 +19,11 @@ export function Fact() {
               <Styled.Figure color="yellow">
                 <HandshakeCircleIcon />
               </Styled.Figure>
-              <h3>Un partenariat basé sur la confiance</h3>
+              <h3>Confiance et transparence</h3>
             </header>
             <p>
-              Nous avons à coeur de bâtir des partenariats durables reposant sur des relations de
-              confiance pour construire ensemble un partenariat pérenne et fructueux.
+              Nous avons à coeur de bâtir une relation durable reposant sur la confiance et la
+              transparence pour construire ensemble un partenariat pérenne et fructueux.
             </p>
           </Card>
           <Card background="primary" rounded shadow>

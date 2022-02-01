@@ -127,26 +127,34 @@ export default function PrivacyPolicy(_props: NextPage) {
               Certaines données personnelles peuvent être traitées en dehors de l&apos;EEE. Pour
               plus d’informations&nbsp;:
               <br />
-              <a href="https://novocall.co/legal-resources/" target="_blank" rel="noreferrer">
+              <a
+                href="https://novocall.co/legal-resources/"
+                target="_blank"
+                rel="nofollow noreferrer"
+              >
                 Ressources juridiques | Novocall
               </a>
               <br />
               <a
                 href="https://www.salesforce.com/fr/company/privacy/"
                 target="_blank"
-                rel="noreferrer"
+                rel="nofollow noreferrer"
               >
                 https://www.salesforce.com/fr/company/privacy/
               </a>
               <br />
-              <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noreferrer">
+              <a
+                href="https://vercel.com/legal/privacy-policy"
+                target="_blank"
+                rel="nofollow noreferrer"
+              >
                 https://vercel.com/legal/privacy-policy
               </a>
               <br />
               <a
                 href="https://support.google.com/analytics/answer/6004245"
                 target="_blank"
-                rel="noreferrer"
+                rel="nofollow noreferrer"
               >
                 https://support.google.com/analytics/answer/6004245
               </a>
@@ -216,7 +224,7 @@ export default function PrivacyPolicy(_props: NextPage) {
               En cas d&apos;insatisfaction liée à la gestion de vos données personnelles, vous
               pouvez introduire une réclamation auprès de la CNIL&nbsp;: soit directement en ligne
               en accédant au service dédié&nbsp;:{' '}
-              <a href="https://www.cnil.fr" target="_blank" rel="noreferrer">
+              <a href="https://www.cnil.fr" target="_blank" rel="nofollow noreferrer">
                 https://www.cnil.fr
               </a>
               , soit par courrier à l&apos;adresse suivante&nbsp;: CNIL - 3 Place de Fontenoy - TSA

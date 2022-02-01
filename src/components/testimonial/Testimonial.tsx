@@ -24,7 +24,7 @@ export function Testimonial() {
             </Styled.Figure>
             <h4>
               Assurance rapide et efficace, la souscription se fait en moins de 5 minutes et les
-              explications sont claires, j&apos;ai pu choisir sereinement mon assurance habitation
+              explications sont claires, j&apos;ai pu choisir sereinement mon assurance habitation.
             </h4>
           </Styled.Card>
           <Styled.Card>
@@ -42,7 +42,7 @@ export function Testimonial() {
             </Styled.Figure>
             <h4>
               Super réactivité dans le traitement de mon dégât des eaux, les différentes étapes
-              étaient bien expliquées et j&apos;ai rapidement été remboursé
+              étaient bien expliquées et j&apos;ai rapidement été remboursé.
             </h4>
           </Styled.Card>
         </OneToX>
