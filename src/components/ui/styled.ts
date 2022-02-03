@@ -628,7 +628,7 @@ export const OtherPageLayout = styled('div', {
       marginTop: '$4',
     },
   },
-  '& > ul': {
+  '& ul': {
     marginLeft: '$4',
     paddingLeft: '$4',
     listStylePosition: 'outside',
