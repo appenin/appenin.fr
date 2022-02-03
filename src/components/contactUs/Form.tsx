@@ -78,7 +78,6 @@ export function Form() {
       await fetch(process.env.salesForce!, {
         body: formData,
         method: 'POST',
-        mode: 'no-cors',
       });
       pushEvent({
         action: 'submit_form',
