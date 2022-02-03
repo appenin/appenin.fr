@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import GroupePhoto from '@/assets/photos/Photo-Groupe-Covea-650x433.jpeg';
-import Anchor from '@/components/anchor';
-import { Section } from '@/components/ui';
+import { Anchor, Section } from '@/components/ui';
 
 type AboutProps = { withLinks?: boolean };
 
@@ -31,7 +30,7 @@ export function About({ withLinks = false }: AboutProps) {
             layout="fill"
             objectFit="cover"
             objectPosition="center"
-            priority
+            priority={false}
             src="/assets/illustrations/startup.svg"
           />
         </Section.Figure>
@@ -57,6 +56,7 @@ export function About({ withLinks = false }: AboutProps) {
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            priority={false}
             src={GroupePhoto}
           />
         </Section.Figure>

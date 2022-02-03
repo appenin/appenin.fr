@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import type { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import Footer from '@/components/footer';
 import Group from '@/components/group';
 import Header from '@/components/header';
@@ -8,10 +8,7 @@ import { ContentText, Section, Text } from '@/components/ui';
 export default function Contact(_props: NextPage) {
   return (
     <>
-      <Head>
-        <title>Contact - Appenin</title>
-        <meta name="description" content="" />
-      </Head>
+      <NextSeo title="Contact - Appenin" />
       <Header />
       <main>
         <Section>

@@ -2,9 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import IllustrationHP1 from '@/assets/photos/IllusHP-V7c.jpg';
 import IllustrationHP2 from '@/assets/photos/IllusHP-V6c.jpg';
-import Anchor from '@/components/anchor';
 import { About as CommonAbout } from '@/components/common';
-import { Section } from '@/components/ui';
+import { Anchor, Section } from '@/components/ui';
 import * as Styled from './styled';
 
 export function About() {
@@ -38,7 +37,7 @@ export function About() {
             layout="fill"
             objectFit="cover"
             objectPosition="top"
-            priority
+            priority={false}
             src="/assets/illustrations/insurance.svg"
           />
         </Section.Figure>
@@ -66,7 +65,7 @@ export function About() {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                priority
+                priority={false}
                 src={IllustrationHP1}
               />
             </Styled.Slide>
@@ -76,7 +75,7 @@ export function About() {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                priority
+                priority={false}
                 src={IllustrationHP2}
               />
             </Styled.Slide>

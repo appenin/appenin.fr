@@ -24,6 +24,9 @@
 /cypress/videos
 /cypress/screenshots
 
+# Contentlayer
+.contentlayer
+
 # production
 /build
 
@@ -51,3 +54,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+
+# Contentlayer
+.contentlayer

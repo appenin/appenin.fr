@@ -1,5 +1,4 @@
 import { createRef } from 'react';
-import Head from 'next/head';
 import type { NextPage } from 'next';
 import Engagement from '@/components/engagement';
 import Footer from '@/components/footer';
@@ -15,10 +14,6 @@ export default function Home(_props: NextPage) {
 
   return (
     <>
-      <Head>
-        <title>Accueil - Appenin</title>
-        <meta name="description" content="" />
-      </Head>
       <Header stickyAnchorRef={stickyElRef} withSticky />
       <main>
         <Background />

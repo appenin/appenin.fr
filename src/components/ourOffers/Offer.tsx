@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import { Section, Spacer, Text } from '@/components/ui';
+import * as Styled from './styled';
 
 const BACKGROUND_COLOR = 'var(--colors-backgroundBrandLight)';
 
@@ -20,47 +21,31 @@ export function Offer() {
           <strong>Ce que vous gagnez avec Appenin&nbsp;?</strong>
           <br />
           <br />
-          <h6 style={{ marginBottom: '0.5rem' }}>
-            <CheckCircleIcon
-              style={{
-                color: 'hsl(var(--colors-blueStone))',
-                display: 'inline',
-                marginRight: '0.5rem',
-              }}
-            />
-            Une <strong>expérience client</strong> assurance au top
-          </h6>
-          <h6 style={{ marginBottom: '0.5rem' }}>
-            <CheckCircleIcon
-              style={{
-                color: 'hsl(var(--colors-blueStone))',
-                display: 'inline',
-                marginRight: '0.5rem',
-              }}
-            />
-            Des <strong>revenus additionnels</strong> et récurrents
-          </h6>
-          <h6 style={{ marginBottom: '0.5rem' }}>
-            <CheckCircleIcon
-              style={{
-                color: 'hsl(var(--colors-blueStone))',
-                display: 'inline',
-                marginRight: '0.5rem',
-              }}
-            />
-            Une <strong>intégration simple et rapide</strong> dans vos parcours de vente
-          </h6>
-          <h6 style={{ marginBottom: '0.5rem' }}>
-            <CheckCircleIcon
-              style={{
-                color: 'hsl(var(--colors-blueStone))',
-                display: 'inline',
-                marginRight: '0.5rem',
-              }}
-            />
-            Des <strong>parcours conformes</strong> aux exigences règlementaires (parce que
-            l&apos;assurance, c&apos;est du sérieux...)
-          </h6>
+          <Styled.OfferItem>
+            <CheckCircleIcon />
+            <h6>
+              Une <strong>expérience client</strong> assurance au top
+            </h6>
+          </Styled.OfferItem>
+          <Styled.OfferItem>
+            <CheckCircleIcon />
+            <h6>
+              Des <strong>revenus additionnels</strong> et récurrents
+            </h6>
+          </Styled.OfferItem>
+          <Styled.OfferItem>
+            <CheckCircleIcon />
+            <h6>
+              Une <strong>intégration simple et rapide</strong> dans vos parcours de vente
+            </h6>
+          </Styled.OfferItem>
+          <Styled.OfferItem>
+            <CheckCircleIcon />
+            <h6>
+              Des <strong>parcours conformes</strong> aux exigences règlementaires (parce que
+              l&apos;assurance, c&apos;est du sérieux...)
+            </h6>
+          </Styled.OfferItem>
           <br />
           <strong>Bonus&nbsp;:</strong> pour les professionnels de l&apos;immobilier, une
           attestation RC locative peut vous être transmise automatiquement à la souscription
@@ -72,7 +57,7 @@ export function Offer() {
             layout="fill"
             objectFit="cover"
             objectPosition="top"
-            priority
+            priority={false}
             src="/assets/illustrations/insurance.svg"
           />
         </Section.Figure>

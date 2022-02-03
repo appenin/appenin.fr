@@ -1,5 +1,5 @@
 import { styled } from '@/styles';
-import { ButtonVariantSize } from '@/components/button/styled';
+import { ButtonVariantSize } from '@/components/ui/Button';
 
 export const Wrapper = styled('div', {
   width: '$full',

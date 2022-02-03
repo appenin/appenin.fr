@@ -1,8 +1,7 @@
-import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
-import ArrowRightIcon from '@/assets/icons/arrow-right.svg';
-//https://github.com/leandrowd/react-responsive-carousel
 import { Carousel as CarouselComponent } from 'react-responsive-carousel';
 import type { CarouselProps } from 'react-responsive-carousel';
+import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
+import ArrowRightIcon from '@/assets/icons/arrow-right.svg';
 import * as Styled from './styled';
 
 function ButtonPrevious(onClickHandler: () => void, hasPrev: boolean, _label: string) {

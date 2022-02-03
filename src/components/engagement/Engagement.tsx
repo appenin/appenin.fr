@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Illustration from '@/assets/photos/toa-heftiba-4xe-yVFJCvw-unsplash.jpg';
-import Anchor from '@/components/anchor';
-import { Section } from '@/components/ui';
+import { Anchor, Section } from '@/components/ui';
 
 export function Engagement() {
   return (
@@ -35,6 +34,7 @@ export function Engagement() {
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            priority={false}
             src={Illustration}
           />
         </Section.Figure>

@@ -1,7 +1,6 @@
 import { forwardRef, HTMLAttributes } from 'react';
 import Link from 'next/link';
-import Button from '@/components/button';
-import { Section } from '@/components/ui';
+import { Button, Section } from '@/components/ui';
 import { Section as StyledSection } from '@/components/ui/styled';
 
 type HeroProps = HTMLAttributes<HTMLDivElement>;
@@ -15,7 +14,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => (
           <br />
           <br />
           <Link href="/nous-contacter" passHref>
-            <Button color="secondary" size="lg">
+            <Button as="a" color="secondary" size="lg">
               Devenir partenaire
             </Button>
           </Link>

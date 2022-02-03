@@ -1,7 +1,7 @@
 import { forwardRef, HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from '@/components/button';
+import { Button } from '@/components/ui';
 import { Container, Section } from '@/components/ui/styled';
 import * as Styled from './styled';
 
@@ -24,12 +24,12 @@ export const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => (
           </h3>
           <footer data-testid="hero-footer">
             <Link href="/contact" passHref>
-              <Button bordered fluid>
+              <Button as="a" bordered fluid>
                 Je suis assuré
               </Button>
             </Link>
             <Link href="/nous-contacter" passHref>
-              <Button color="secondary" fluid>
+              <Button as="a" color="secondary" fluid>
                 Devenir partenaire
               </Button>
             </Link>

@@ -2,8 +2,7 @@ import Link from 'next/link';
 import HandshakeCircleIcon from '@/assets/icons/handshake-circle.svg';
 import HouseIcon from '@/assets/icons/house.svg';
 import LegalHammerShieldIcon from '@/assets/icons/legal-hammer-shield.svg';
-import Anchor from '@/components/anchor';
-import { Card, OneToX, Section } from '@/components/ui';
+import { Anchor, Card, OneToX, Section } from '@/components/ui';
 import * as Styled from './styled';
 
 export function Product() {

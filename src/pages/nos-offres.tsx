@@ -1,6 +1,6 @@
 import { createRef } from 'react';
-import Head from 'next/head';
 import type { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import Engagement from '@/components/engagement';
 import Footer from '@/components/footer';
 import Group from '@/components/group';
@@ -14,10 +14,7 @@ export default function OurOffers(_props: NextPage) {
 
   return (
     <>
-      <Head>
-        <title>Nos offres - Appenin</title>
-        <meta name="description" content="" />
-      </Head>
+      <NextSeo title="Nos offres - Appenin" />
       <Header stickyAnchorRef={stickyElRef} withSticky />
       <main>
         <Hero ref={stickyElRef} />

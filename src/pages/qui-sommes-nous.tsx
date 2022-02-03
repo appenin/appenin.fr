@@ -1,6 +1,6 @@
 import { createRef } from 'react';
-import Head from 'next/head';
 import type { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import { About as About } from '@/components/common';
 import Engagement from '@/components/engagement';
 import Footer from '@/components/footer';
@@ -15,10 +15,7 @@ export default function WhoAreWe(_props: NextPage) {
 
   return (
     <>
-      <Head>
-        <title>Qui sommes nous ? - Appenin</title>
-        <meta name="description" content="" />
-      </Head>
+      <NextSeo title="Qui sommes nous ? - Appenin" />
       <Header stickyAnchorRef={stickyElRef} withSticky />
       <main>
         <Hero ref={stickyElRef} />
