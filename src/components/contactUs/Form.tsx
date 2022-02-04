@@ -1,16 +1,17 @@
+import { FormEvent, useRef } from 'react';
 import { Field, Formik } from 'formik';
 import type { FieldAttributes, FormikErrors, FormikHelpers, FormikTouched } from 'formik';
-import { useRouter } from 'next/router';
 import * as Yup from 'yup';
 import { Button, OneToX, Section } from '@/components/ui';
 import { pushEvent } from '@/libs/google';
 import * as Styled from './styled';
 
-const FIELD_MAX_SIZE_80 = 80;
+const FIELD_ERROR_EMAIL = 'Adresse email invalide';
+const FIELD_ERROR_REQUIRED = 'Veuillez renseigner ce champ';
+const FIELD_ERROR_TOO_LONG = 'caractères maximum';
 const FIELD_MAX_SIZE_40 = 40;
-const MESSAGE_FIELD_ID = '00N0900000IntABEAZ';
-const REQUIRED_ERROR = 'Veuillez renseigner ce champ';
-const TOO_LONG_ERROR = 'caractères maximum';
+const FIELD_MAX_SIZE_80 = 80;
+const FIELD_MESSAGE_ID_NAME = '00N0900000IntABEAZ';
 
 type ContactFields = {
   company: string;
@@ -18,24 +19,24 @@ type ContactFields = {
   first_name: string;
   email: string;
   mobile: string;
-  [MESSAGE_FIELD_ID]: string;
+  [FIELD_MESSAGE_ID_NAME]: string;
 };
 
 const ContactSchema = Yup.object().shape({
   company: Yup.string()
-    .max(FIELD_MAX_SIZE_40, `${FIELD_MAX_SIZE_40} ${TOO_LONG_ERROR}`)
-    .required(REQUIRED_ERROR),
+    .max(FIELD_MAX_SIZE_40, `${FIELD_MAX_SIZE_40} ${FIELD_ERROR_TOO_LONG}`)
+    .required(FIELD_ERROR_REQUIRED),
   first_name: Yup.string()
-    .max(FIELD_MAX_SIZE_40, `${FIELD_MAX_SIZE_40} ${TOO_LONG_ERROR}`)
-    .required(REQUIRED_ERROR),
+    .max(FIELD_MAX_SIZE_40, `${FIELD_MAX_SIZE_40} ${FIELD_ERROR_TOO_LONG}`)
+    .required(FIELD_ERROR_REQUIRED),
   last_name: Yup.string()
-    .max(FIELD_MAX_SIZE_80, `${FIELD_MAX_SIZE_80} ${TOO_LONG_ERROR}`)
-    .required(REQUIRED_ERROR),
+    .max(FIELD_MAX_SIZE_80, `${FIELD_MAX_SIZE_80} ${FIELD_ERROR_TOO_LONG}`)
+    .required(FIELD_ERROR_REQUIRED),
   email: Yup.string()
-    .max(FIELD_MAX_SIZE_80, `${FIELD_MAX_SIZE_80} ${TOO_LONG_ERROR}`)
-    .email('Adresse email invalide')
-    .required(REQUIRED_ERROR),
-  mobile: Yup.string().max(FIELD_MAX_SIZE_40, `${FIELD_MAX_SIZE_40} ${TOO_LONG_ERROR}`),
+    .max(FIELD_MAX_SIZE_80, `${FIELD_MAX_SIZE_80} ${FIELD_ERROR_TOO_LONG}`)
+    .email(FIELD_ERROR_EMAIL)
+    .required(FIELD_ERROR_REQUIRED),
+  mobile: Yup.string().max(FIELD_MAX_SIZE_40, `${FIELD_MAX_SIZE_40} ${FIELD_ERROR_TOO_LONG}`),
 });
 
 interface FormFieldProps extends FieldAttributes<any> {
@@ -62,31 +63,36 @@ function FormField({ errors, label, touched, ...props }: FormFieldProps) {
 }
 
 export function Form() {
-  const { push } = useRouter();
+  const formEl = useRef<HTMLFormElement>(null);
 
-  const handleFormSubmit = async (
+  const handleFormikFormSubmit = async (
     values: ContactFields,
     _formikHelpers: FormikHelpers<ContactFields>,
   ) => {
-    const formData = new FormData();
-    Object.keys(values).forEach((name) => {
-      formData.append(name, values[name as keyof ContactFields]);
-    });
-    formData.append('oid', '00D0900000CvkPR');
-    formData.append('retURL', 'https://www.appenin.fr/merci');
-    try {
-      await fetch(process.env.salesForce!, {
-        body: formData,
-        method: 'POST',
+    //trick to bypass SFDC's native web-to-lead form integration to use Formik/Yup
+    if (formEl && formEl.current) {
+      Object.keys(values).forEach((name) => {
+        let w2lField: HTMLInputElement | HTMLTextAreaElement;
+        if (name === FIELD_MESSAGE_ID_NAME) {
+          w2lField = document.createElement('textarea');
+        } else {
+          w2lField = document.createElement('input');
+          w2lField.type = 'text';
+        }
+        w2lField.name = name;
+        w2lField.value = values[name as keyof ContactFields];
+        formEl.current!.appendChild(w2lField);
       });
-      pushEvent({
-        action: 'submit_form',
-        category: 'Contact',
-      });
-      push('/merci');
-    } catch (error) {
-      console.log(error);
+      (formEl.current.submit as unknown as HTMLInputElement).click();
     }
+  };
+
+  const handleWebToLeadFormSubmit = (_event: FormEvent<HTMLFormElement>) => {
+    pushEvent({
+      action: 'submit_form',
+      category: 'Contact',
+      label: '',
+    });
   };
 
   return (
@@ -102,10 +108,10 @@ export function Form() {
             first_name: '',
             email: '',
             mobile: '',
-            [MESSAGE_FIELD_ID]: '',
+            [FIELD_MESSAGE_ID_NAME]: '',
           }}
           validationSchema={ContactSchema}
-          onSubmit={handleFormSubmit}
+          onSubmit={handleFormikFormSubmit}
         >
           {({ errors, handleSubmit, isSubmitting, touched }) => (
             <Styled.Form noValidate onSubmit={handleSubmit}>
@@ -170,13 +176,24 @@ export function Form() {
                 touched={touched}
               />
               <footer>
-                <Button color="secondary" type="submit" disabled={isSubmitting}>
+                <Button color="secondary" disabled={isSubmitting} name="submit" type="submit">
                   Envoyer
                 </Button>
               </footer>
             </Styled.Form>
           )}
         </Formik>
+        <form
+          action={process.env.salesForce}
+          method="POST"
+          onSubmit={handleWebToLeadFormSubmit}
+          ref={formEl}
+          style={{ display: 'none' }}
+        >
+          <input name="oid" type="hidden" value="00D0900000CvkPR" />
+          <input name="retURL" type="hidden" value="https://www.appenin.fr/merci" />
+          <input name="submit" type="submit" value="send" />
+        </form>
       </Styled.FormContainer>
     </Section>
   );

@@ -3,6 +3,7 @@ import type { CarouselProps } from 'react-responsive-carousel';
 import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
 import ArrowRightIcon from '@/assets/icons/arrow-right.svg';
 import * as Styled from './styled';
+import { VariantProps } from '@stitches/react';
 
 function ButtonPrevious(onClickHandler: () => void, hasPrev: boolean, _label: string) {
   return (
@@ -32,11 +33,12 @@ export function Carousel({
   showStatus = false,
   showThumbs = false,
   transitionTime = 400,
+  transparent = false,
   children,
   ...props
-}: Partial<CarouselProps>) {
+}: Partial<CarouselProps> & VariantProps<typeof Styled.Wrapper>) {
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper transparent={transparent}>
       <CarouselComponent
         autoPlay={autoPlay}
         infiniteLoop={infiniteLoop}

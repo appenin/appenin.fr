@@ -15,6 +15,15 @@ export const Wrapper = styled('div', {
     display: 'flex',
     justifyContent: 'center',
   },
+  variants: {
+    transparent: {
+      true: {
+        borderRadius: 'unset',
+        boxShadow: 'unset',
+        backgroundColor: 'unset',
+      },
+    },
+  },
 });
 
 export const CarouselItem = styled('div', {

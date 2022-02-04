@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import IllustrationHP1 from '@/assets/photos/IllusHP-V7c.jpg';
-import IllustrationHP2 from '@/assets/photos/IllusHP-V6c.jpg';
+import IllustrationHP1 from '@/assets/photos/IllusHP-V8a.png';
+import IllustrationHP2 from '@/assets/photos/IllusHP-V8b.png';
 import { About as CommonAbout } from '@/components/common';
 import { Anchor, Section } from '@/components/ui';
 import * as Styled from './styled';
@@ -58,7 +58,7 @@ export function About() {
           </Link>
         </Section.Article>
         <Section.Figure fluid>
-          <Styled.Slider>
+          <Styled.Slider transparent>
             <Styled.Slide>
               <Image
                 alt="Illustration"
