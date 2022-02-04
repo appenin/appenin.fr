@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Button from '@/components/button';
+import { Button } from '@/components/ui';
 import type { HTMLAttributesWithVariants } from '@/styles';
 import * as Styled from './styled';
 
@@ -19,17 +19,21 @@ export function Navigation(props: NavigationProps) {
   return (
     <Styled.Navigation {...props} {...ariaProps}>
       <Link href={NAVIGATION_BUTTONS[0]} passHref>
-        <Button {...(pathname === NAVIGATION_BUTTONS[0] ? { activated: true } : {})}>
+        <Button as="a" {...(pathname === NAVIGATION_BUTTONS[0] ? { activated: true } : {})}>
           Nos offres
         </Button>
       </Link>
       <Link href={NAVIGATION_BUTTONS[1]} passHref>
-        <Button {...(pathname === NAVIGATION_BUTTONS[1] ? { activated: true } : {})}>
+        <Button as="a" {...(pathname === NAVIGATION_BUTTONS[1] ? { activated: true } : {})}>
           Qui sommes-nous&nbsp;?
         </Button>
       </Link>
       <Link href={NAVIGATION_BUTTONS[2]} passHref>
-        <Button bordered {...(pathname === NAVIGATION_BUTTONS[2] ? { activated: true } : {})}>
+        <Button
+          as="a"
+          bordered
+          {...(pathname === NAVIGATION_BUTTONS[2] ? { activated: true } : {})}
+        >
           Contact
         </Button>
       </Link>

@@ -1,8 +1,7 @@
 import { MouseEvent } from 'react';
 import CalendarIcon from '@/assets/icons/calendar.svg';
 import SendEmailIcon from '@/assets/icons/send-email.svg';
-import Button from '@/components/button';
-import { Card, OneToX, Section } from '@/components/ui';
+import { Button, Card, OneToX, Section } from '@/components/ui';
 import * as Styled from './styled';
 
 export function Contact() {

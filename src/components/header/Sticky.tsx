@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 import Link from 'next/link';
-import Button from '@/components/button';
+import { Button } from '@/components/ui';
 import type { HTMLAttributesWithVariants } from '@/styles';
 import * as Styled from './styled';
 import { Logo } from '.';
@@ -17,10 +17,14 @@ export function Sticky(props: StickyProps) {
         <Logo data-testid="header-sticky-logo" />
         <nav data-testid="header-sticky-navigation">
           <Link href="/contact" passHref>
-            <Button bordered>Je suis assuré</Button>
+            <Button as="a" bordered>
+              Je suis assuré
+            </Button>
           </Link>
           <Link href="/nous-contacter" passHref>
-            <Button color="secondary">Devenir partenaire</Button>
+            <Button as="a" color="secondary">
+              Devenir partenaire
+            </Button>
           </Link>
         </nav>
       </Styled.Container>

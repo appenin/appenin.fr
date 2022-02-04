@@ -15,7 +15,7 @@ export function Group() {
               layout="fill"
               objectFit="contain"
               objectPosition="left"
-              priority={false}
+              priority={true}
               src="/assets/logos/covea-group-white.svg"
             />
           </figure>

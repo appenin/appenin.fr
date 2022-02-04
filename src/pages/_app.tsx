@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
-import Head from 'next/head';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import Script from 'next/script';
+import { DefaultSeo } from 'next-seo';
 import { GA_TRACKING_ID, pageView } from '@/libs/google';
+import { seo } from '@/libs/seo';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -21,6 +23,7 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <DefaultSeo {...seo} />
       <Component {...pageProps} />
       <Script
         id="google-script"

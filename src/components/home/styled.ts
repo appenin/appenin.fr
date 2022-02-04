@@ -1,5 +1,5 @@
 import Carousel, { CarouselItem } from '@/components/carousel';
-import { Card, Container, Section } from '@/components/ui/styled';
+import { Container, Section } from '@/components/ui/styled';
 import { styled } from '@/styles';
 
 export const BackgroundWrapper = styled(Section, {
@@ -89,22 +89,20 @@ export const Hero = styled('div', {
   },
 });
 
-export const FactCard = styled(Card, {
-  gap: 0,
-  padding: 0,
+export const FactCard = styled('article', {
+  display: 'flex',
+  justifyContent: 'flex-start',
+  gap: '$2',
   '& *': {
-    color: '$textTertiary',
+    color: 'hsl($white)',
   },
-  '& > header': {
+  '& > svg': {
+    alignSelf: 'baseline',
+    flexShrink: 0,
+  },
+  '& h4': {
     fontWeight: '$bold',
-    marginBottom: '$3',
-    '& > *': {
-      display: 'inline-block',
-      verticalAlign: 'middle',
-      '&:nth-child(2)': {
-        paddingLeft: '$3',
-      },
-    },
+    marginBottom: '$2',
   },
 });
 

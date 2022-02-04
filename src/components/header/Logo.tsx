@@ -7,7 +7,12 @@ export function Logo(props: AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
     <Link href="/" passHref>
       <Styled.Logo {...props}>
-        <Image alt="Appenin gradient logo" layout="fill" src="/assets/logos/appenin-gradient.svg" />
+        <Image
+          alt="Appenin gradient logo"
+          layout="fill"
+          priority
+          src="/assets/logos/appenin-gradient.svg"
+        />
       </Styled.Logo>
     </Link>
   );

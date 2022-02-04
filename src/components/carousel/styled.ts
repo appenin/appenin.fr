@@ -11,6 +11,19 @@ export const Wrapper = styled('div', {
   '& .slider-wrapper': {
     borderRadius: '$5px',
   },
+  '& .carousel .slide': {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  variants: {
+    transparent: {
+      true: {
+        borderRadius: 'unset',
+        boxShadow: 'unset',
+        backgroundColor: 'unset',
+      },
+    },
+  },
 });
 
 export const CarouselItem = styled('div', {

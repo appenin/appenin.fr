@@ -80,3 +80,15 @@ export const Figure = styled('figure', {
     },
   },
 });
+
+export const OfferItem = styled('div', {
+  display: 'flex',
+  justifyContent: 'flex-start',
+  gap: '$2',
+  marginBottom: '$3!important',
+  '& > svg': {
+    color: 'hsl($blueStone)',
+    alignSelf: 'baseline',
+    flexShrink: 0,
+  },
+});

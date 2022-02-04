@@ -90,6 +90,22 @@ export const Field = styled('div', {
       borderColor: 'hsl($brand)',
     },
   },
+  '& > span': {
+    display: 'none',
+  },
+  variants: {
+    invalid: {
+      true: {
+        '& > input, & > textarea': {
+          borderColor: 'hsl($mandy)!important',
+        },
+        '& > span': {
+          display: 'block',
+          color: 'hsl($mandy)',
+        },
+      },
+    },
+  },
 });
 
 export const Figure = styled('figure', {

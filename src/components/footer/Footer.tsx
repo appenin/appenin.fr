@@ -1,9 +1,9 @@
 import { HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LinkedinIcon from '@/assets/icons/linkedin.svg';
-import { Button } from '@/components/button/styled';
-import { Section, XtoOne } from '@/components/ui';
+import GithubIcon from '@/assets/logos/github.svg';
+import LinkedinIcon from '@/assets/logos/linkedin.svg';
+import { Button, Section, XtoOne } from '@/components/ui';
 import * as Styled from './styled';
 
 export type FooterProps = HTMLAttributes<HTMLElement>;
@@ -13,7 +13,7 @@ export function Footer(props: FooterProps) {
     <Section>
       <Styled.Footer as="footer" {...props}>
         <Styled.Logo>
-          <Image alt="Appenin logo" layout="fill" src="/assets/logos/appenin.svg" />
+          <Image alt="Appenin logo" layout="fill" priority src="/assets/logos/appenin.svg" />
         </Styled.Logo>
         <XtoOne columns={2} css={{ placeItems: 'flex-start' }}>
           <ul>
@@ -55,27 +55,47 @@ export function Footer(props: FooterProps) {
           </ul>
           <ul>
             <li>
-              <Link href="https://welcometothejungle.com/fr/companies/appenin" passHref>
-                <Button
-                  as="a"
-                  color="primary"
-                  size="sm"
-                  target="_blank"
-                  css={{ '&:hover,&:focus': { textDecoration: 'none!important' } }}
-                >
-                  👉&nbsp;On recrute&nbsp;!
-                </Button>
-              </Link>
+              <Button
+                as="a"
+                color="primary"
+                css={{ '&:hover,&:focus': { textDecoration: 'none!important' } }}
+                href="https://welcometothejungle.com/fr/companies/appenin"
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+              >
+                👉&nbsp;On recrute&nbsp;!
+              </Button>
             </li>
-            <li style={{ paddingTop: '1rem' }}>
+            <li
+              style={{
+                paddingTop: '2rem',
+              }}
+            >
               <strong>Suivez-nous</strong>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/company/appenin/" passHref>
-                <a target="_blank">
-                  <LinkedinIcon />
-                </a>
-              </Link>
+              <a
+                href="https://www.linkedin.com/company/appenin/"
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <LinkedinIcon style={{ display: 'inline' }} />
+              </a>
+            </li>
+            <li
+              style={{
+                paddingTop: '1rem',
+              }}
+            >
+              <a
+                href="https://github.com/appenin/"
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+                title="Github"
+              >
+                <GithubIcon />
+              </a>
             </li>
           </ul>
         </XtoOne>

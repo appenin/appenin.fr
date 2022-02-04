@@ -613,3 +613,37 @@ export const ContentText = styled('div', {
     padding: '$12',
   },
 });
+
+export const OtherPageLayout = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '$6',
+  borderRadius: '$5px',
+  boxShadow: '$default',
+  backgroundColor: '$backgroundPrimary',
+  padding: '$8',
+  '& > p': {
+    color: '$textPrimary',
+    '& ~ h2': {
+      marginTop: '$4',
+    },
+  },
+  '& ul': {
+    marginLeft: '$4',
+    paddingLeft: '$4',
+    listStylePosition: 'outside',
+    listStyleType: 'disc',
+    '& ul': {
+      listStyleType: 'circle',
+    },
+  },
+  '& a': {
+    textDecoration: 'underline',
+    '&:hover,&:focus': {
+      color: '$textSecondary',
+    },
+  },
+  '@md': {
+    padding: '$12',
+  },
+});

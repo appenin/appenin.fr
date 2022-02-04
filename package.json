@@ -1,7 +1,7 @@
 {
   "name": "appenin.fr",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "appenin.fr - website",
   "author": "Appenin <hello@appenin.fr>",
   "license": "MIT",
@@ -24,10 +24,16 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.6",
+    "contentlayer": "^0.0.34",
+    "formik": "^2.2.9",
+    "lottie-react": "^2.2.1",
     "next": "12.0.9",
+    "next-contentlayer": "^0.0.34",
+    "next-seo": "^5.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-responsive-carousel": "^3.2.22"
+    "react-responsive-carousel": "^3.2.22",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import IllustrationWeb from '@/assets/photos/IllusWeb-V6.jpg';
-import VisuelAPI from '@/assets/photos/Visuel-Api-V1.jpg';
-import Anchor from '@/components/anchor';
-import { Section, Text } from '@/components/ui';
+import Lottie from 'lottie-react';
+import animationDataWeb from '@/assets/lotties/lf20_z4o5l14q.json';
+import animationDataAPI from '@/assets/lotties/lf20_7c3aj4wa.json';
+import { Anchor, Section, Text } from '@/components/ui';
 
 export function About() {
   return (
@@ -36,13 +36,7 @@ export function About() {
           </Link>
         </Section.Article>
         <Section.Figure fluid>
-          <Image
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            src={IllustrationWeb}
-          />
+          <Lottie animationData={animationDataWeb} autoplay={true} loop={true} />
         </Section.Figure>
       </Section>
       <Section block="left">
@@ -56,14 +50,18 @@ export function About() {
             votre parcours client. Et notre équipe est présente pour répondre à toutes vos
             questions.
           </p>
-          <Link href="https://developers.appenin.fr/" passHref>
-            <Anchor arrow underlined target="_blank">
-              Lire la documentation
-            </Anchor>
-          </Link>
+          <Anchor
+            arrow
+            href="https://developers.appenin.fr/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            underlined
+          >
+            Lire la documentation
+          </Anchor>
         </Section.Article>
         <Section.Figure fluid>
-          <Image alt="" layout="fill" objectFit="cover" objectPosition="center" src={VisuelAPI} />
+          <Lottie animationData={animationDataAPI} autoplay={true} loop={true} />
         </Section.Figure>
       </Section>
     </>

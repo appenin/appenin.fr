@@ -73,6 +73,7 @@ export const Button = styled('button', {
       true: {
         width: '$full',
         padding: '$4 !important',
+        textAlign: 'center',
       },
     },
     size: {

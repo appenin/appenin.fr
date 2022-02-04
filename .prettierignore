@@ -1,7 +1,9 @@
 .cache
+.contentlayer
 .next
 coverage
 node_modules
+public
 package.json
 package-lock.json
 yarn.lock

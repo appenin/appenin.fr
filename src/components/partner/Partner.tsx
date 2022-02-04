@@ -19,7 +19,13 @@ export function Partner() {
           <Carousel>
             <Styled.Slide>
               <figure>
-                <Image alt="Rentila" height={30.24} src="/assets/logos/rentila.svg" width={100} />
+                <Image
+                  alt="Rentila"
+                  height={30.24}
+                  priority
+                  src="/assets/logos/rentila.svg"
+                  width={100}
+                />
               </figure>
               <p>
                 <OpenQuoteIcon />
@@ -35,7 +41,13 @@ export function Partner() {
             </Styled.Slide>
             <Styled.Slide>
               <figure>
-                <Image alt="Sogexia" height={29.3} src="/assets/logos/sogexia.svg" width={100} />
+                <Image
+                  alt="Sogexia"
+                  height={29.3}
+                  priority
+                  src="/assets/logos/sogexia.svg"
+                  width={100}
+                />
               </figure>
               <p>
                 <OpenQuoteIcon />
@@ -50,7 +62,7 @@ export function Partner() {
             </Styled.Slide>
             <Styled.Slide>
               <figure>
-                <Image alt="E-Mobilia" height={30} src={EMobiliaLogo} width={100} />
+                <Image alt="E-Mobilia" height={30} priority src={EMobiliaLogo} width={100} />
               </figure>
               <p>
                 <OpenQuoteIcon />
@@ -67,7 +79,13 @@ export function Partner() {
             </Styled.Slide>
             <Styled.Slide>
               <figure>
-                <Image alt="Greystar" height={32.05} src="/assets/logos/greystar.svg" width={100} />
+                <Image
+                  alt="Greystar"
+                  height={32.05}
+                  priority
+                  src="/assets/logos/greystar.svg"
+                  width={100}
+                />
               </figure>
               <p>
                 <OpenQuoteIcon />
@@ -82,7 +100,13 @@ export function Partner() {
             </Styled.Slide>
             <Styled.Slide>
               <figure>
-                <Image alt="Odalys campus" height={39} src={OdalysCampusLogo} width={100} />
+                <Image
+                  alt="Odalys campus"
+                  height={39}
+                  priority
+                  src={OdalysCampusLogo}
+                  width={100}
+                />
               </figure>
               <p>
                 <OpenQuoteIcon />
