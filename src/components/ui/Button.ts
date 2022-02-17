@@ -36,6 +36,12 @@ export const Button = styled('button', {
   '&:focus': {
     outline: 'none',
   },
+  '&[disabled],&[disabled]:hover,&[disabled]:focus': {
+    color: 'hsl($blackHaze)',
+    backgroundColor: 'transparent',
+    borderColor: 'hsl($blackHaze)',
+    cursor: 'not-allowed',
+  },
   variants: {
     activated: {
       true: {

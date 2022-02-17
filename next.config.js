@@ -33,8 +33,8 @@ module.exports = withContentlayer()(
     env: {
       analytics: '//www.googletagmanager.com/gtag/js?id=',
       fontInter: '//fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-      novocall: '//call.novocall.co/v1/widgets?id=RiL79OgM65w',
-      salesForce: '//webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
+      novocall: '//call.novocall.co/v1/widgets?id=',
+      salesforce: '//webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
     },
     experimental: {
       //To remove properties matching the default regex ^data-test

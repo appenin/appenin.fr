@@ -107,12 +107,12 @@ textDecorationColor
     },
     //fontSize
     fontSizes: {
-      '3_5': '0.875rem',
+      '3_5': '.875rem',
       4: '1rem',
       '4_5': '1.125rem',
       5: '1.25rem',
       6: '1.5rem',
-      9: '2.25rem',
+      8: '2rem',
       12: '3rem',
       full: '100%',
     },
@@ -243,9 +243,9 @@ scrollPaddingInlineEnd
 scrollPaddingInlineStart
      */
     space: {
-      1: '0.25rem',
-      2: '0.5rem',
-      3: '0.75rem',
+      1: '.25rem',
+      2: '.5rem',
+      3: '.75rem',
       4: '1rem',
       5: '1.25rem',
       6: '1.5rem',
@@ -267,6 +267,7 @@ scrollPaddingInlineStart
       1: 1,
       1000: 1000,
       1010: 1010,
+      1020: 1020,
     },
   },
   utils: {},

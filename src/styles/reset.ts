@@ -16,12 +16,9 @@ export const reset = {
     overflowWrap: 'break-word',
   },
   h1: {
-    fontSize: '$9',
+    fontSize: '$8',
     fontWeight: 'bold',
     lineHeight: 1,
-    '@md': {
-      fontSize: '$12',
-    },
   },
   h2: {
     color: '$textPrimary',
@@ -32,17 +29,26 @@ export const reset = {
   h3: {
     color: '$textPrimary',
     fontWeight: 'bold',
-    fontSize: '$5',
+    fontSize: '$4_5',
     lineHeight: 1.4,
   },
   h4: {
     color: '$textPrimary',
     fontWeight: 'medium',
-    fontSize: '$4_5',
+    fontSize: '$4',
     lineHeight: 1.4,
   },
   p: {
     color: '$textSecondary',
+  },
+  '#react-portal-dialog-wrapper': {
+    position: 'absolute',
+    inset: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'hsl($brand/0.3)',
+    zIndex: '$1020',
   },
   '.novocall-button.novocall-small': {
     '@max-sm': {
@@ -88,7 +94,7 @@ export const reset = {
     //Appenin theme
     backgroundColor: '$backgroundPrimary',
     color: '$textPrimary',
-    overflow: 'var(--app-body-overflow)',
+    overflow: 'var(--body-overflow)',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
     '@md': {

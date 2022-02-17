@@ -27,24 +27,35 @@ export function Header({ stickyAnchorRef, withSticky = false, ...props }: Header
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  const handleFocus = useCallback(
-    (event: Event) => {
-      const bodyOverflowPropertyValue = getComputedStyle(document.body).overflow;
-      if (bodyOverflowPropertyValue === 'hidden') {
-        if (rootRef.current && event.target && rootRef.current.contains(event.target as Node)) {
-        } else {
-          if (toggleRef.current) toggleRef.current.focus();
+  const focusTrap = useCallback((event: KeyboardEvent) => {
+    const els =
+      rootRef.current?.querySelectorAll<HTMLElement>(
+        'a[href].focus-trap, button.focus-trap, .focus-trap a[href], .focus-trap button',
+      ) || [];
+    const firstFocusableEl = els.length > 0 ? els[0] : null;
+    const lastFocusableEl = els.length > 0 ? els[els.length - 1] : null;
+    if (firstFocusableEl && lastFocusableEl && event.key === 'Tab') {
+      if (event.shiftKey) {
+        if (document.activeElement === firstFocusableEl) {
+          lastFocusableEl.focus();
+          event.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusableEl) {
+          firstFocusableEl.focus();
+          event.preventDefault();
         }
       }
-    },
-    [toggleRef],
-  );
+    }
+  }, []);
 
-  //focus trap when mobile navigation is open (fullscreen)
   useEffect(() => {
-    document.addEventListener('focus', handleFocus, true);
-    return () => document.removeEventListener('focus', handleFocus, true);
-  }, [handleFocus]);
+    document.addEventListener('keydown', focusTrap);
+
+    return () => {
+      document.removeEventListener('keydown', focusTrap);
+    };
+  }, [focusTrap]);
 
   //observe element visibility to hide/show the sticky navigation
   useEffect(() => {
@@ -85,14 +96,15 @@ export function Header({ stickyAnchorRef, withSticky = false, ...props }: Header
   return (
     <Styled.Wrapper as="section" ref={rootRef}>
       <Styled.Container as="header" {...props}>
-        <Logo data-testid="header-logo" />
+        <Logo className="focus-trap" data-testid="header-logo" />
         <Toggle
+          className="focus-trap"
           data-testid="header-toggle-button"
           onClick={handleClick}
           open={isMobileNavOpen}
           ref={toggleRef}
         />
-        <Navigation data-testid="header-navigation" full={isMobileNavOpen} />
+        <Navigation className="focus-trap" data-testid="header-navigation" full={isMobileNavOpen} />
         <Sticky data-testid="header-sticky" visible={isSticky} />
       </Styled.Container>
     </Styled.Wrapper>

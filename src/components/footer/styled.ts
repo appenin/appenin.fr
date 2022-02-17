@@ -23,6 +23,7 @@ export const Footer = styled(Container, {
   marginBottom: '$26',
   '& a': {
     '&:hover,&:focus': {
+      cursor: 'pointer',
       textDecoration: 'underline',
     },
   },

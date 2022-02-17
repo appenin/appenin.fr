@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import Script from 'next/script';
 import { DefaultSeo } from 'next-seo';
-import { GA_TRACKING_ID, pageView } from '@/libs/google';
+import CookieConsent, { CookieConsentProvider, ServiceId } from '@/components/cookieConsent';
+import { GA_MEASUREMENT_ID, pageView } from '@/libs/google';
 import { seo } from '@/libs/seo';
-
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function App({ Component, pageProps, router: { events } }: AppProps) {
@@ -24,27 +23,25 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultSeo {...seo} />
-      <Component {...pageProps} />
-      <Script
-        id="google-script"
-        src={`${process.env.analytics}${GA_TRACKING_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="google-init"
-        dangerouslySetInnerHTML={{
-          __html: `
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_TRACKING_ID}', {
-  page_path: window.location.pathname,
-});
-        `,
-        }}
-        strategy="afterInteractive"
-      />
-      <Script id="novocall-script" src={process.env.novocall} strategy="afterInteractive" />
+      <CookieConsentProvider>
+        <Component {...pageProps} />
+        <CookieConsent
+          onLoad={() => {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = (...args: any[]) => {
+              window.dataLayer.push(...args);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config', GA_MEASUREMENT_ID, {
+              //anonymize_ip: true,
+            });
+            pageView(window.location.pathname);
+          }}
+          serviceId={ServiceId.ga}
+          strategy="afterInteractive"
+        />
+        <CookieConsent serviceId={ServiceId.novocall} strategy="afterInteractive" />
+      </CookieConsentProvider>
     </>
   );
 }

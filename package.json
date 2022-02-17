@@ -1,7 +1,7 @@
 {
   "name": "appenin.fr",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "appenin.fr - website",
   "author": "Appenin <hello@appenin.fr>",
   "license": "MIT",
@@ -33,6 +33,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-responsive-carousel": "^3.2.22",
+    "sharp": "^0.30.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {
