@@ -4,6 +4,7 @@ import type { FieldAttributes, FormikErrors, FormikHelpers, FormikTouched } from
 import * as Yup from 'yup';
 import { Button, OneToX, Section } from '@/components/ui';
 import { pushEvent } from '@/libs/google';
+import { SFDC_FIELD_ID, SFDC_OID, SFDC_RETURN_URL } from '@/libs/salesforce';
 import * as Styled from './styled';
 
 const FIELD_ERROR_EMAIL = 'Adresse email invalide';
@@ -11,7 +12,7 @@ const FIELD_ERROR_REQUIRED = 'Veuillez renseigner ce champ';
 const FIELD_ERROR_TOO_LONG = 'caractères maximum';
 const FIELD_MAX_SIZE_40 = 40;
 const FIELD_MAX_SIZE_80 = 80;
-const FIELD_MESSAGE_ID_NAME = '00N0900000IntABEAZ';
+const FIELD_MESSAGE_ID_NAME = SFDC_FIELD_ID as string;
 
 type ContactFields = {
   company: string;
@@ -19,7 +20,7 @@ type ContactFields = {
   first_name: string;
   email: string;
   mobile: string;
-  [FIELD_MESSAGE_ID_NAME]: string;
+  [key: string]: string;
 };
 
 const ContactSchema = Yup.object().shape({
@@ -52,7 +53,7 @@ function FormField({ errors, label, touched, ...props }: FormFieldProps) {
 
   return (
     <Styled.Field {...invalid}>
-      <label htmlFor={name}>
+      <label htmlFor={name as string}>
         {label}
         {required && <span>{` *`}</span>}
       </label>
@@ -89,9 +90,9 @@ export function Form() {
 
   const handleWebToLeadFormSubmit = (_event: FormEvent<HTMLFormElement>) => {
     pushEvent({
-      action: 'submit_form',
-      category: 'Contact',
-      label: '',
+      action: 'generate_lead',
+      category: 'engagement',
+      label: 'contact_form_submit',
     });
   };
 
@@ -171,7 +172,7 @@ export function Form() {
                 as="textarea"
                 errors={errors}
                 label="MESSAGE"
-                name="00N0900000IntABEAZ"
+                name={FIELD_MESSAGE_ID_NAME}
                 rows={5}
                 touched={touched}
               />
@@ -184,14 +185,14 @@ export function Form() {
           )}
         </Formik>
         <form
-          action={process.env.salesForce}
+          action={process.env.salesforce}
           method="POST"
           onSubmit={handleWebToLeadFormSubmit}
           ref={formEl}
           style={{ display: 'none' }}
         >
-          <input name="oid" type="hidden" value="00D0900000CvkPR" />
-          <input name="retURL" type="hidden" value="https://www.appenin.fr/merci" />
+          <input name="oid" type="hidden" value={SFDC_OID} />
+          <input name="retURL" type="hidden" value={SFDC_RETURN_URL} />
           <input name="submit" type="submit" value="send" />
         </form>
       </Styled.FormContainer>

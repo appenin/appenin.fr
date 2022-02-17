@@ -49,6 +49,7 @@ export const Hero = styled('div', {
     flexDirection: 'column',
     gap: '$8',
     h1: {
+      fontSize: '$12',
       fontWeight: '$bold',
     },
     h3: {

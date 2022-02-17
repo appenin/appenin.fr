@@ -1,14 +1,35 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, useContext, useEffect, useState } from 'react';
 import CalendarIcon from '@/assets/icons/calendar.svg';
 import SendEmailIcon from '@/assets/icons/send-email.svg';
+import {
+  CookieConsentContext,
+  CookieConsentContextProps,
+  Service,
+  ServiceId,
+  ServiceStatus,
+} from '@/components/cookieConsent';
 import { Button, Card, OneToX, Section } from '@/components/ui';
 import * as Styled from './styled';
 
 export function Contact() {
-  const handleAppointmentClick = (_event: MouseEvent<HTMLButtonElement>) => {
-    const novocallButton = document.querySelector<HTMLDivElement>('.novocall.novocall-button');
-    if (novocallButton) {
-      novocallButton.click();
+  const [clickToCall, setClickToCall] = useState<Service>();
+  const { getServiceById, services, toggleCustomizeDialog } = useContext(
+    CookieConsentContext,
+  ) as CookieConsentContextProps;
+
+  useEffect(() => {
+    const clickToCallService = getServiceById(ServiceId.novocall);
+    setClickToCall(clickToCallService);
+  }, [getServiceById, services]);
+
+  const handleShowCustomizeDialog = () => {
+    toggleCustomizeDialog(true);
+  };
+
+  const handleClickToCall = (_event: MouseEvent<HTMLButtonElement>) => {
+    const clickToCallButton = document.querySelector<HTMLDivElement>('.novocall.novocall-button');
+    if (clickToCallButton) {
+      clickToCallButton.click();
     }
   };
 
@@ -35,7 +56,20 @@ export function Contact() {
               </Styled.Figure>
               <h3>Prendre rendez-vous</h3>
             </header>
-            <Button bordered onClick={handleAppointmentClick}>
+            {clickToCall?.status !== ServiceStatus.allowed && (
+              <p style={{ textAlign: 'justify' }}>
+                Pour activer cette fonctionnalité, vous devez préalablement autoriser les cookies de
+                notre partenaire <strong>{clickToCall?.name}</strong> en cliquant{' '}
+                <Button bordered onClick={handleShowCustomizeDialog} size="sm" type="button">
+                  <strong>ici</strong>
+                </Button>
+              </p>
+            )}
+            <Button
+              bordered
+              disabled={clickToCall?.status !== ServiceStatus.allowed}
+              onClick={handleClickToCall}
+            >
               Réservez un appel
             </Button>
           </Card>

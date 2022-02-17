@@ -81,6 +81,7 @@ export const Container = styled('div', {
         '& > nav': {
           display: 'flex',
           gap: '$6',
+          justifyContent: 'space-between',
           width: '$full',
           '& > button': {
             placeSelf: 'stretch',
@@ -93,6 +94,7 @@ export const Container = styled('div', {
             },
           },
           '@sm': {
+            justifyContent: 'inherit',
             width: 'inherit',
           },
         },
