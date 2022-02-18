@@ -5,21 +5,24 @@ export const Banner = styled('div', {
   bottom: 0,
   display: 'flex',
   flexDirection: 'column',
-  gap: '$6',
+  gap: '$4',
   width: '$full',
-  padding: '$6 $4',
+  padding: '$2 $4',
   backgroundColor: '$backgroundPrimary',
   borderRadius: '$5px $5px 0 0',
   boxShadow: '0 8px 64px 16px hsl(var(--colors-brand))',
   zIndex: '$1020',
   '@sm': {
     right: '$2',
-    maxWidth: 'calc($lg/3)',
+    maxWidth: 'calc($lg/3.5)',
     boxShadow: '0 8px 16px 8px hsl(var(--colors-brand)/0.3)',
+  },
+  '@md': {
+    fontSize: '0.8125em',
   },
   '& > header,& > footer': {
     display: 'flex',
-    gap: '$4',
+    gap: '$2',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -35,6 +38,10 @@ export const Banner = styled('div', {
   },
   '& > footer': {
     flexDirection: 'column',
+    button: {
+      padding: '0.75em 1em',
+      fontSize: '1em',
+    },
   },
   '& ul': {
     listStyleType: 'disc',

@@ -78,7 +78,7 @@ export const Button = styled('button', {
     fluid: {
       true: {
         width: '$full',
-        padding: '$4 !important',
+        //padding: '$4 !important',
         textAlign: 'center',
       },
     },

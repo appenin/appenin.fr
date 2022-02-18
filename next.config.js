@@ -30,15 +30,15 @@ const securityHeaders = [
 
 module.exports = withContentlayer()(
   withBundleAnalyzer({
+    compiler: {
+      //To remove properties matching the default regex ^data-test
+      reactRemoveProperties: true,
+    },
     env: {
       analytics: '//www.googletagmanager.com/gtag/js?id=',
       fontInter: '//fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
       novocall: '//call.novocall.co/v1/widgets?id=',
       salesforce: '//webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
-    },
-    experimental: {
-      //To remove properties matching the default regex ^data-test
-      reactRemoveProperties: true,
     },
     async headers() {
       return [
@@ -54,7 +54,8 @@ module.exports = withContentlayer()(
       defaultLocale: 'fr',
     },
     reactStrictMode: true,
-    swcMinify: true,
+    //Disable the minification to prevent lottie's animation problem between development and production mode
+    //swcMinify: true,
     webpack: (config, { isServer }) => {
       // fixes packages that depend on fs/module module
       if (!isServer) {
