@@ -54,13 +54,13 @@ export function Banner() {
         ).
       </section>
       <footer>
-        <Button color="secondary" fluid onClick={handleAllowAll} type="button">
+        <Button color="secondary" fluid onClick={handleAllowAll} size="sm" type="button">
           Tout accepter
         </Button>
-        <Button bordered onClick={handleDenyAll} fluid type="button">
+        <Button bordered fluid onClick={handleDenyAll} size="sm" type="button">
           Tout refuser
         </Button>
-        <Button fluid onClick={handleShowCustomizeDialog} type="button">
+        <Button fluid onClick={handleShowCustomizeDialog} size="sm" type="button">
           Personnaliser
         </Button>
       </footer>
