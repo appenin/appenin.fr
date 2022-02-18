@@ -28,12 +28,13 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
         <CookieConsent
           onLoad={() => {
             window.dataLayer = window.dataLayer || [];
-            window.gtag = (...args: any[]) => {
-              window.dataLayer.push(...args);
+            window.gtag = function () {
+              window.dataLayer.push(arguments);
             };
             window.gtag('js', new Date());
             window.gtag('config', GA_MEASUREMENT_ID, {
               //anonymize_ip: true,
+              page_path: window.location.pathname,
             });
             pageView(window.location.pathname);
           }}
