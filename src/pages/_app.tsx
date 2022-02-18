@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 import { DefaultSeo } from 'next-seo';
 import CookieConsent, { CookieConsentProvider, ServiceId } from '@/components/cookieConsent';
 import { GA_MEASUREMENT_ID, pageView } from '@/libs/google';
@@ -25,20 +26,20 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
       <DefaultSeo {...seo} />
       <CookieConsentProvider>
         <Component {...pageProps} />
-        <CookieConsent
-          onLoad={() => {
-            window.dataLayer = window.dataLayer || [];
-            window.gtag = function () {
-              window.dataLayer.push(arguments);
-            };
-            window.gtag('js', new Date());
-            window.gtag('config', GA_MEASUREMENT_ID, {
-              //anonymize_ip: true,
-              page_path: window.location.pathname,
-            });
-            pageView(window.location.pathname);
+        <CookieConsent serviceId={ServiceId.ga} strategy="afterInteractive" />
+        <Script
+          id="ga-init"
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}', {
+  //anonymize_ip: true,
+  page_path: window.location.pathname,
+});
+        `,
           }}
-          serviceId={ServiceId.ga}
           strategy="afterInteractive"
         />
         <CookieConsent serviceId={ServiceId.novocall} strategy="afterInteractive" />
