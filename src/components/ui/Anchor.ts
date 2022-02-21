@@ -5,6 +5,7 @@ export const Anchor = styled('a', {
   position: 'relative',
   color: 'transparent',
   backgroundClip: 'text',
+  WebkitBoxDecorationBreak: 'clone',
   backgroundImage: '$gradientPrimary',
   fontWeight: '$medium',
   '&:hover,&:focus': {
