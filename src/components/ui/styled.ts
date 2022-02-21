@@ -4,6 +4,7 @@ import type { CSS } from '@/styles';
 export const Text = styled('span', {
   color: 'transparent',
   backgroundClip: 'text',
+  WebkitBoxDecorationBreak: 'clone',
   variants: {
     color: {
       primary: {
@@ -122,6 +123,7 @@ export const Header = styled('h2', {
           color: 'transparent',
           backgroundImage: '$gradientSecondary',
           backgroundClip: 'text',
+          WebkitBoxDecorationBreak: 'clone',
         },
       },
     },
