@@ -35,12 +35,13 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}', {
-  //anonymize_ip: true,
-  page_path: window.location.pathname,
+  //'anonymize_ip': true,
+  'send_page_view': false,
 });
+gtag('set', 'page_path', window.location.pathname);
+gtag('event', 'page_view');
         `,
           }}
-          strategy="afterInteractive"
         />
         <CookieConsent serviceId={ServiceId.novocall} strategy="afterInteractive" />
       </CookieConsentProvider>
