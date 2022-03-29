@@ -29,7 +29,7 @@ export const SERVICES: Service[] = [
     ],
     description:
       "Service de mesure d'audience qui permet de générer des statistiques de fréquentation utiles à l'amélioration de notre site Web.",
-    //forceReloadWhenAllowed: true,
+    forceReloadWhenAllowed: true,
     forceReloadWhenDenied: true,
     id: ServiceId.ga,
     name: 'Google Analytics',
