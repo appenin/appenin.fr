@@ -3,8 +3,9 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID;
 //https://developers.google.com/analytics/devguides/collection/gtagjs/single-page-applications
 export function pageView(url: string) {
   if (typeof window.gtag !== 'undefined') {
-    window.gtag('set', 'page_path', url);
-    window.gtag('event', 'page_view');
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      page_path: url,
+    });
   }
 }
 

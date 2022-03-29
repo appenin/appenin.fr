@@ -7,15 +7,24 @@ export const Logo = styled('a', {
   outline: 'none',
   height: 36,
   width: 114,
-  marginBottom: '$8',
+  marginBottom: '$2',
   '&:focus': {
     borderRadius: '$5px',
     boxShadow: '$outline',
   },
   '@md': {
-    height: 48,
-    width: 152,
-    marginBottom: 0,
+    height: 71,
+    width: 224.83,
+    marginBottom: '$6',
+  },
+});
+
+export const Catchphrase = styled('h5', {
+  color: 'hsl($blueStone)',
+  fontWeight: '$semibold',
+  fontSize: '$4',
+  '@md': {
+    fontSize: '$5',
   },
 });
 

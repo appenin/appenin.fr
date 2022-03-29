@@ -19,9 +19,24 @@ export function Footer(props: FooterProps) {
   return (
     <Section>
       <Styled.Footer as="footer" {...props}>
-        <Styled.Logo>
-          <Image alt="Appenin logo" layout="fill" priority src="/assets/logos/appenin.svg" />
-        </Styled.Logo>
+        <div>
+          <Styled.Logo>
+            <Image
+              alt="Appenin logo"
+              layout="fill"
+              priority
+              src="/assets/logos/appenin-gradient.svg"
+            />
+          </Styled.Logo>
+          <Styled.Catchphrase>L&apos;assurance digitale du groupe Covéa</Styled.Catchphrase>
+          <Image
+            alt="Covéa logo"
+            height={97}
+            priority={false}
+            src="/assets/logos/covea-group.svg"
+            width={367}
+          />
+        </div>
         <XtoOne columns={2} css={{ placeItems: 'flex-start' }}>
           <ul>
             <li>
@@ -68,7 +83,10 @@ export function Footer(props: FooterProps) {
               <Button
                 as="a"
                 color="primary"
-                css={{ '&:hover,&:focus': { textDecoration: 'none!important' } }}
+                css={{
+                  whiteSpace: 'nowrap',
+                  '&:hover,&:focus': { textDecoration: 'none!important' },
+                }}
                 href="https://welcometothejungle.com/fr/companies/appenin"
                 rel="nofollow noopener noreferrer"
                 target="_blank"
