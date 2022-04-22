@@ -60,9 +60,13 @@ export function Footer(props: FooterProps) {
               </Link>
             </li>
             <li>
-              <Link href="/contact" passHref>
-                <a>Je suis assuré</a>
-              </Link>
+              <a
+                href="https://client.appenin.fr"
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+              >
+                Je suis assuré
+              </a>
             </li>
             <li>
               <Link href="/mentions-legales" passHref>

@@ -23,11 +23,16 @@ export const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => (
             ⚡ Simplifiez la vie de vos clients, générez des revenus complémentaires.
           </h3>
           <footer data-testid="hero-footer">
-            <Link href="/contact" passHref>
-              <Button as="a" bordered fluid>
-                Je suis assuré
-              </Button>
-            </Link>
+            <Button
+              as="a"
+              href="https://client.appenin.fr"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+              bordered
+              fluid
+            >
+              Je suis assuré
+            </Button>
             <Link href="/nous-contacter" passHref>
               <Button as="a" color="secondary" fluid>
                 Devenir partenaire
