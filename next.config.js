@@ -49,6 +49,15 @@ module.exports = withContentlayer()(
         },
       ];
     },
+    async redirects() {
+      return [
+        {
+          source: `/contact`,
+          destination: `https://client.appenin.fr/contact`,
+          permanent: true,
+        },
+      ];
+    },
     i18n: {
       locales: ['fr'],
       defaultLocale: 'fr',
