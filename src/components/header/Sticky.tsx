@@ -16,11 +16,15 @@ export function Sticky(props: StickyProps) {
       <Styled.Container ui="sticky">
         <Logo data-testid="header-sticky-logo" />
         <nav data-testid="header-sticky-navigation">
-          <Link href="/contact" passHref>
-            <Button as="a" bordered>
-              Je suis assuré
-            </Button>
-          </Link>
+          <Button
+            as="a"
+            href="https://client.appenin.fr"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            bordered
+          >
+            Je suis assuré
+          </Button>
           <Link href="/nous-contacter" passHref>
             <Button as="a" color="secondary">
               Devenir partenaire
