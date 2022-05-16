@@ -35,8 +35,7 @@ module.exports = withContentlayer()(
       reactRemoveProperties: true,
     },
     env: {
-      analytics: '//www.googletagmanager.com/gtag/js?id=',
-      fontInter: '//fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+      analytics: '//appenin.matomo.cloud',
       novocall: '//call.novocall.co/v1/widgets?id=',
       salesforce: '//webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
     },
