@@ -3,7 +3,7 @@ import { Field, Formik } from 'formik';
 import type { FieldAttributes, FormikErrors, FormikHelpers, FormikTouched } from 'formik';
 import * as Yup from 'yup';
 import { Button, OneToX, Section } from '@/components/ui';
-import { pushEvent } from '@/libs/google';
+import { pushEvent } from '@/libs/matomo';
 import { SFDC_FIELD_ID, SFDC_OID, SFDC_RETURN_URL } from '@/libs/salesforce';
 import * as Styled from './styled';
 
@@ -92,7 +92,7 @@ export function Form() {
     pushEvent({
       action: 'generate_lead',
       category: 'engagement',
-      label: 'contact_form_submit',
+      name: 'contact_form_submit',
     });
   };
 
