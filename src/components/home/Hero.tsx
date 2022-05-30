@@ -20,7 +20,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => (
             pour vos clients
           </h1>
           <h3 data-testid="hero-sub-header">
-            ⚡ Simplifiez la vie de vos clients, générez des revenus complémentaires.
+            ⚡ Simplifiez la vie de vos clients avec une assurance 100%&nbsp;digitale.
           </h3>
           <footer data-testid="hero-footer">
             <Button
