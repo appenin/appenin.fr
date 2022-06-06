@@ -1,21 +1,14 @@
-import { HTMLAttributes, useContext } from 'react';
+import { HTMLAttributes } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import GithubIcon from '@/assets/logos/github.svg';
 import LinkedinIcon from '@/assets/logos/linkedin.svg';
-import { CookieConsentContext, CookieConsentContextProps } from '@/components/cookieConsent';
 import { Button, Section, XtoOne } from '@/components/ui';
 import * as Styled from './styled';
 
 export type FooterProps = HTMLAttributes<HTMLElement>;
 
 export function Footer(props: FooterProps) {
-  const { toggleCustomizeDialog } = useContext(CookieConsentContext) as CookieConsentContextProps;
-
-  const handleShowCustomizeDialog = () => {
-    toggleCustomizeDialog(true);
-  };
-
   return (
     <Section>
       <Styled.Footer as="footer" {...props}>
@@ -77,9 +70,6 @@ export function Footer(props: FooterProps) {
               <Link href="/politique-de-confidentialite" passHref>
                 <a>Politique de confidentialité</a>
               </Link>
-            </li>
-            <li>
-              <a onClick={handleShowCustomizeDialog}>Cookies</a>
             </li>
           </ul>
           <ul>
