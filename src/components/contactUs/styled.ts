@@ -129,3 +129,17 @@ export const Figure = styled('figure', {
     },
   },
 });
+
+export const CardHeader = styled('header', {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '$6',
+});
+
+export const CardBody = styled('p', {
+  color: '$textSecondary',
+  a: {
+    color: '$textPrimary',
+    fontWeight: '$bold',
+  },
+});
