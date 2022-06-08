@@ -129,3 +129,11 @@ export const Figure = styled('figure', {
     },
   },
 });
+
+export const CardBody = styled('p', {
+  color: '$textSecondary',
+  a: {
+    color: '$textPrimary',
+    fontWeight: '$bold',
+  },
+});

@@ -90,6 +90,35 @@ export const Hero = styled('div', {
   },
 });
 
+export const Covea = styled(Container, {
+  display: 'flex',
+  flexDirection: 'column',
+  paddingTop: '0!important',
+  '& > figure': {
+    position: 'relative',
+    flex: 1,
+    minHeight: 97,
+    '@sm': {
+      textAlign: 'right',
+    },
+  },
+  '@sm': {
+    flexDirection: 'row',
+    alignItems: 'center',
+    '> *': {
+      width: '50%',
+    },
+  },
+});
+
+export const CoveaHeader = styled('h3', {
+  color: '$textSecondary',
+  paddingBottom: '$8',
+  '@sm': {
+    paddingBottom: 0,
+  },
+});
+
 export const FactCard = styled('article', {
   display: 'flex',
   justifyContent: 'flex-start',

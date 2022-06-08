@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
 import { DefaultSeo } from 'next-seo';
-import CookieConsent, { CookieConsentProvider, ServiceId } from '@/components/cookieConsent';
 import { MATOMO_SITE_ID, pageView } from '@/libs/matomo';
 import { seo } from '@/libs/seo';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -24,10 +23,7 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultSeo {...seo} />
-      <CookieConsentProvider>
-        <Component {...pageProps} />
-        <CookieConsent serviceId={ServiceId.novocall} strategy="afterInteractive" />
-      </CookieConsentProvider>
+      <Component {...pageProps} />
       <Script
         id="matomo-script"
         strategy="afterInteractive"
