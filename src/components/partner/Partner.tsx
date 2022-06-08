@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import OpenQuoteIcon from '@/assets/icons/open-quote.svg';
-import EMobiliaLogo from '@/assets/logos/e-mobilia.png';
 import OdalysCampusLogo from '@/assets/logos/odalys-campus.jpg';
 import Carousel from '@/components/carousel';
 import { Section } from '@/components/ui';
@@ -58,23 +57,6 @@ export function Partner() {
               <footer>
                 <strong>Kilian Füg</strong>
                 CEO / Directeur Général de Sogexia
-              </footer>
-            </Styled.Slide>
-            <Styled.Slide>
-              <figure>
-                <Image alt="E-Mobilia" height={30} priority src={EMobiliaLogo} width={100} />
-              </figure>
-              <p>
-                <OpenQuoteIcon />
-                La solution proposée par Appenin correspond totalement aux besoins du client et aux
-                attentes du marché d&apos;un point de vue expérience client et parcours digital. Les
-                équipes d&apos;Appenin ont compris notre organisation et continuent de nous
-                accompagner dans ce déploiement auprès de nos clients utilisateurs et dans notre
-                réseau E-Mobilia.
-              </p>
-              <footer>
-                <strong>Lionel Faure</strong>
-                Directeur Commercial E-Mobilia - Demeco Group
               </footer>
             </Styled.Slide>
             <Styled.Slide>

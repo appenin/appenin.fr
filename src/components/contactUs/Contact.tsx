@@ -7,12 +7,12 @@ export function Contact() {
     <Section>
       <Section.Container>
         <Card background="primary" rounded shadow>
-          <Styled.CardHeader>
+          <header>
             <Styled.Figure color="yellow">
               <SendEmailIcon />
             </Styled.Figure>
             <h3>Email</h3>
-          </Styled.CardHeader>
+          </header>
           <Styled.CardBody>
             Vous pouvez nous envoyer un email à{` `}
             <a href="mailto:partenaires@appenin.fr">partenaires@appenin.fr</a>
