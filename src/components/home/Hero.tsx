@@ -31,7 +31,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>((props, ref) => (
               bordered
               fluid
             >
-              Je suis assuré
+              Je suis client
             </Button>
             <Link href="/nous-contacter" passHref>
               <Button as="a" color="secondary" fluid>
