@@ -23,7 +23,7 @@ export function Sticky(props: StickyProps) {
             rel="nofollow noopener noreferrer"
             bordered
           >
-            Je suis assuré
+            Je suis client
           </Button>
           <Link href="/nous-contacter" passHref>
             <Button as="a" color="secondary">

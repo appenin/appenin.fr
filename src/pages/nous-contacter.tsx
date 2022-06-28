@@ -1,3 +1,4 @@
+import { createRef } from 'react';
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import Footer from '@/components/footer';
@@ -6,12 +7,14 @@ import Header from '@/components/header';
 import { Contact, Form, Hero } from '@/components/contactUs';
 
 export default function ContactUs(_props: NextPage) {
+  const stickyElRef = createRef<HTMLElement>();
+
   return (
     <>
       <NextSeo title="Nous contacter - Appenin" />
-      <Header />
+      <Header stickyAnchorRef={stickyElRef} withSticky />
       <main>
-        <Hero />
+        <Hero ref={stickyElRef} />
         <Form />
         <Contact />
         <Group />

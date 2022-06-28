@@ -28,15 +28,6 @@ export function Navigation(props: NavigationProps) {
           Qui sommes-nous&nbsp;?
         </Button>
       </Link>
-      <Link href={NAVIGATION_BUTTONS[2]} passHref>
-        <Button
-          as="a"
-          bordered
-          {...(pathname === NAVIGATION_BUTTONS[2] ? { activated: true } : {})}
-        >
-          Contact
-        </Button>
-      </Link>
     </Styled.Navigation>
   );
 }
