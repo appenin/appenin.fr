@@ -24,6 +24,8 @@ export default function App({ Component, pageProps, router: { events } }: AppPro
       </Head>
       <DefaultSeo {...seo} />
       <Component {...pageProps} />
+      <Script type="text/javascript" src="https://cache.consentframework.com/js/pa/31787/c/tn6wJ/stub" />
+      <Script type="text/javascript" src="https://choices.consentframework.com/js/pa/31787/c/tn6wJ/cmp" async />
       <Script
         id="matomo-script"
         strategy="afterInteractive"
