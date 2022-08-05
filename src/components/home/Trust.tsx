@@ -4,6 +4,7 @@ import PichetLogo from '@/assets/logos/pichet.svg';
 import RentilaLogo from '@/assets/logos/rentila.svg';
 //import ResideEtudesLogo from '@/assets/logos/reside-etudes.png';
 import SogexiaLogo from '@/assets/logos/sogexia.svg';
+import UnisLogo from '@/assets/logos/unis.png';
 import { Section, XtoOne } from '@/components/ui';
 import * as Styled from './styled';
 
@@ -24,6 +25,7 @@ export function Trust() {
           <RentilaLogo />
           <PartnersFinancesLogo />
           {/*<Image alt="Réside Etudes" height={27} src={ResideEtudesLogo} width={100} />*/}
+          <Image alt="UNIS" height={47} src={UnisLogo} width={100} />
         </XtoOne>
       </Styled.TrustContainer>
     </Section>
